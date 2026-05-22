@@ -20,15 +20,14 @@ const Navbar = () => {
       </Link>
 
       {/* Nav pill */}
-      <nav className="bg-black  px-2 py-1 flex items-center gap-1 shadow-xl">
+      <nav className="bg-black/90 backdrop-blur-md  px-2 py-1 flex items-center gap-1 shadow-xl">
         {navLinks.map((link) => (
           <Link
             key={link}
             href={`/${link.toLowerCase()}`}
             className={`
               text-white text-[20px] leading-6.5 font-light px-5 py-3 rounded-sm
-              transition-colors delay-150 duration-600 ease-in-out hover:text-custom1
-              ${link === "Home" ? "bg-white/5" : ""}
+              transition-colors delay-150 duration-600 ease-in-out hover:text-custom1}
             `}
           >
             {link}

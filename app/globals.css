@@ -25,12 +25,12 @@
       rgba(0,0,0,0.6) 75%,
       rgba(0,0,0,0.92) 100%
     );
-    filter: blur(6px);
     opacity: 1;
     mix-blend-mode: normal;
     z-index: 50;
     pointer-events: none;
   }
+
 }
 
 

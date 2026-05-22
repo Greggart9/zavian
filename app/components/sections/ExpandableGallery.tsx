@@ -28,6 +28,7 @@ export default function ExpandableGallery() {
   const cursorPos = useRef({ x: 0, y: 0 });
   const rafRef = useRef<number>(0);
 
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       mousePos.current = { x: e.clientX, y: e.clientY };
