@@ -30,6 +30,57 @@
     z-index: 50;
     pointer-events: none;
   }
+.lines {
+  position: relative;
+  overflow: hidden;
+}
+
+.lines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.15) 0px,
+    rgba(255, 255, 255, 0.15) 1.5px,
+    transparent 1.5px,
+    transparent 35px
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+}
+
+/* .lines-top::after {
+  bottom: 50%;
+}
+
+.lines-bottom::after {
+  top: 50%;
+} */
+
+.lines-top::after {
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 25%, transparent 40%);
+  mask-image: linear-gradient(to bottom, black 0%, black 25%, transparent 30%);
+}
+
+.lines-bottom::after {
+  -webkit-mask-image: linear-gradient(to top, black 0%, black 25%, transparent 40%);
+  mask-image: linear-gradient(to top, black 0%, black 25%, transparent 30%);
+}
 
 }
 
