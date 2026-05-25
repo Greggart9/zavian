@@ -4,6 +4,7 @@ import FeaturedProject from '../components/sections/FeaturedProjectCard';
 import { featuredProjects } from "@/data/types/featuredProjects";
 import Services from '../components/sections/Services';
 import Style from '../components/sections/Style';
+import Benefits from '../components/sections/Benefits';
 
 const LandingPage = () => {
   return (
@@ -15,6 +16,7 @@ const LandingPage = () => {
      <FeaturedProject project={featuredProjects[3]} />
      <Services />
      <Style />
+     <Benefits />
     </>
   )
 }

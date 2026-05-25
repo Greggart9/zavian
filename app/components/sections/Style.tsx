@@ -5,12 +5,14 @@ import Image from 'next/image';
 const Style = () => {
     const b = "absolute w-3 h-3 border-custom1";
 
+
+
   return (
     <>
-    <section className="flex flex-col items-center justify-center gap-10 py-20 bg-neutral-300 w-full px-10 ">
+    <section className="flex flex-col items-center justify-center gap-10 py-20 bg-white w-full px-10 ">
         {/* TOP */}
         <div className="text-center">
-            <div className="relative inline-flex items-center px-3 py-2">
+            <div className="relative inline-flex items-center px-3">
                 <span className={`${b} top-0 right-0 border-t-2 border-r-2`} />
                 <span className={`${b} bottom-0 left-0 border-b-2 border-l-2`} />
                 <span className="text-sm font-semibold tracking-widest text-gray-500">STYLE</span>
@@ -29,7 +31,7 @@ const Style = () => {
         </div>
 
         {/* MIDDLE */}
-        <div className="flex gap-3 justify-center">
+        <div className="flex gap-3 justify-center  ">
 
             <div className="w-[473px] h-[480px] relative border-8 border-white lines lines-top shadow-xl">
                 <Image src="/assets/asset 2.png" alt="Style 1" width={473} height={300} className="object-cover w-full h-[68.5%]" />
@@ -62,10 +64,10 @@ const Style = () => {
 
         {/* BOTTOM */}
         <div className='w-full'>
-            <hr className=" border-gray-500" />
+            <hr className=" border-gray-300" />
              <span className="flex justify-between pt-3.5 text-[17px]">
-                <p>[ 1 ]</p>
-                <p>Explore Zavian's Services</p>
+                <p>[ 2 ]</p>
+                <p>3 Pillars of Zavian's Style</p>
              </span>
         </div>
 

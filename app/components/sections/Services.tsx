@@ -18,7 +18,7 @@ const Services = () => {
         <div className='flex flex-col gap-10 mt-20'>
 
               {/* SERVICE 1 */}
-            <div className='flex justify-between items-center bg-blue-50/40 h-45 gap-10 p-7.5 border-4 border-white shadow-xl'>
+            <div className='flex justify-between items-center bg-[#F2F7FA] h-45 gap-10 p-7.5 border-4 border-white shadow-xl'>
 
                 {/* LEFT */}
                 <div className='flex flex-col flex-[2.2] gap-3'>
@@ -40,7 +40,7 @@ const Services = () => {
             </div>
 
              {/* SERVICE 2 */}
-            <div className='flex justify-between items-center bg-blue-50/40 h-45 gap-10 p-7.5 border-4 border-white shadow-xl'>
+            <div className='flex justify-between items-center bg-[#F2F7FA] h-45 gap-10 p-7.5 border-4 border-white shadow-xl'>
 
                 {/* LEFT */}
                 <div className='flex flex-col flex-[2.2] gap-3'>
@@ -62,7 +62,7 @@ const Services = () => {
             </div>
 
             {/* SERVICE 3 */}
-            <div className='flex justify-between items-center bg-blue-50/40 h-45 gap-10 p-7.5 border-4 border-white shadow-xl'>
+            <div className='flex justify-between items-center bg-[#F2F7FA] h-45 gap-10 p-7.5 border-4 border-white shadow-xl'>
 
                 {/* LEFT */}
                 <div className='flex flex-col flex-[2.2] gap-3'>
