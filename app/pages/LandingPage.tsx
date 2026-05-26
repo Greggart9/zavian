@@ -5,6 +5,7 @@ import { featuredProjects } from "@/data/types/featuredProjects";
 import Services from '../components/sections/Services';
 import Style from '../components/sections/Style';
 import Benefits from '../components/sections/Benefits';
+import Testimonial from '../components/sections/Testimonial';
 
 const LandingPage = () => {
   return (
@@ -17,6 +18,7 @@ const LandingPage = () => {
      <Services />
      <Style />
      <Benefits />
+     <Testimonial />
     </>
   )
 }

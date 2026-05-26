@@ -4,7 +4,6 @@ import Image from 'next/image';
 import BeforeAfterSlider from '../ui/BeforeAfterSlider';
 
 const Benefits = () => {
-
     const b = "absolute w-3 h-3 border-custom1";
 
         const services = [
@@ -49,7 +48,7 @@ const Benefits = () => {
                     <div className="relative inline-flex items-center px-3 mb-4 w-fit">
                         <span className={`${b} top-0 right-0 border-t-2 border-r-2`} />
                         <span className={`${b} bottom-0 left-0 border-b-2 border-l-2`} />
-                        <span className="text-sm font-semibold tracking-widest text-gray-500">BENEFITS</span>
+                        <span className="text-sm font-thin tracking-widest text-gray-500">BENEFITS</span>
                     </div>
             
             <div className="flex gap-10 justify-between">

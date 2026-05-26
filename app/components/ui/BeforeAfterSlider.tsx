@@ -3,6 +3,7 @@
 
 import { useRef, useState, useCallback } from "react";
 import Image from "next/image";
+import { FoldHorizontal } from "lucide-react";
 
 type BeforeAfterSliderProps = {
   before: string;
@@ -87,7 +88,7 @@ export default function BeforeAfterSlider({
 
       {/* ── Divider line */}
       <div
-        className="absolute top-0 bottom-0 w-[1px] bg-white z-10 pointer-events-none"
+        className="absolute top-0 bottom-0 w-[3px] bg-white/45 z-10 pointer-events-none"
         style={{ left: `${sliderPos}%` }}
       />
 
@@ -97,13 +98,13 @@ export default function BeforeAfterSlider({
           w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md"
         style={{ left: `${sliderPos}%` }}
       >
-        <span className="text-[#e63b1f] text-[13px] font-bold select-none">↔</span>
+        <span className="text-[#e63b1f] text-[13px] font-bold select-none"><FoldHorizontal strokeWidth={1.5} /></span>
       </div>
 
       {/* ── Bottom gradient */}
       <div
         className="absolute inset-x-0 bottom-0 h-28 z-10 pointer-events-none"
-        style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%)" }}
+        style={{ background: "linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 100%)" }}
       />
 
       {/* ── Text content */}
@@ -113,9 +114,9 @@ export default function BeforeAfterSlider({
             {label}
           </h2>
         )}
-        <div className="flex justify-between items-end">
-          <span className="text-white/60 text-[13px] tracking-widest">[ {index} ]</span>
-          {tagline && <span className="text-white/80 text-[14px]">{tagline}</span>}
+        <div className="flex justify-between items-end pt-2 border-t border-white/20 text-[17px] leading-[23.8px]">
+          <span className="text-white/60 tracking-widest">[ {index} ]</span>
+          {tagline && <span className="text-white/80">{tagline}</span>}
         </div>
       </div>
 

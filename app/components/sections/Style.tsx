@@ -15,7 +15,7 @@ const Style = () => {
             <div className="relative inline-flex items-center px-3">
                 <span className={`${b} top-0 right-0 border-t-2 border-r-2`} />
                 <span className={`${b} bottom-0 left-0 border-b-2 border-l-2`} />
-                <span className="text-sm font-semibold tracking-widest text-gray-500">STYLE</span>
+                <span className="text-sm font-thin tracking-widest text-gray-500">STYLE</span>
             </div>
 
             <p className="text-6xl font-thin pt-3">Zavian’s Signature</p>
