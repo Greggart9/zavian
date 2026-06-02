@@ -30,13 +30,13 @@ const Testimonial = () => {
             </div>
 
             {/* MIDDLE */}
-            <div className="flex gap-5 justify-center h-[391px] mt-10">
+            <div className="flex gap-5 justify-center h-97.75 mt-10">
                     
                     {/* FIRST */}
-                <div className="relative w-[345px] h-full border-4 border-white p-10 shadow-xl overflow-hidden">
+                <div className="relative w-86.25 h-full border-4 border-white p-10 shadow-xl overflow-hidden">
                   
                   
-                    <Image src="/assets/asset 38.png" alt="" fill className="object-cover" />
+                    <Image src="/assets/asset 38.png" alt="" fill sizes="(max-width: 768px) 100vw, 345px" className="object-cover" />
                 
 
                     <div className="absolute inset-0 z-10 bg-black/30 m-4 backdrop-blur-xs" />
@@ -49,7 +49,7 @@ const Testimonial = () => {
                         {/* Top — avatar + name */}
                         <div className="flex items-center gap-3">
                         <div className="relative w-12 h-12 border-3 border-white rounded-sm overflow-hidden shrink-0">
-                            <Image src="/assets/asset 39.png" alt="" fill className="object-cover" />
+                            <Image src="/assets/asset 39.png" alt="" fill sizes="48px" className="object-cover" />
                         </div>
                         <div>
                             <p className="text-white/70 text-[17px] font-thin">Mia Torres</p>
@@ -91,7 +91,7 @@ const Testimonial = () => {
                            {/* Top — avatar + name */}
                             <div className="flex items-center gap-3">
                                 <div className="relative w-12 h-12 overflow-hidden shrink-0">
-                                <Image src="/assets/asset 40.png" alt="" fill className="object-cover rounded-sm border-3 border-white" />
+                                <Image src="/assets/asset 40.png" alt="" fill sizes="48px" className="object-cover rounded-sm border-3 border-white" />
                                 </div>
                                 <div>
                                 <p className="text-black text-[17px] font-thin">Luca Hansen</p>
@@ -109,7 +109,7 @@ const Testimonial = () => {
                           {/* Top — avatar + name */}
                             <div className="flex items-center gap-3">
                                 <div className="relative w-12 h-12 overflow-hidden shrink-0">
-                                <Image src="/assets/asset 41.png" alt="" fill className="object-cover rounded-sm border-3 border-white" />
+                                <Image src="/assets/asset 41.png" alt="" fill sizes="48px" className="object-cover rounded-sm border-3 border-white" />
                                 </div>
                                 <div>
                                 <p className="text-white/70 text-[17px] font-thin">Daniel Kim</p>
@@ -151,7 +151,7 @@ const Testimonial = () => {
                            {/* Top — avatar + name */}
                             <div className="flex items-center gap-3">
                                 <div className="relative w-12 h-12 overflow-hidden shrink-0">
-                                <Image src="/assets/asset 42.png" alt="" fill className="object-cover rounded-sm border-3 border-white" />
+                                <Image src="/assets/asset 42.png" alt="" fill sizes="48px" className="object-cover rounded-sm border-3 border-white" />
                                 </div>
                                 <div>
                                 <p className="text-black text-[17px] font-thin">Priya Nair</p>

@@ -43,7 +43,7 @@ const Benefits = () => {
       <section className="flex flex-col items-center justify-center py-20 grid-overlay w-full h-fit px-10 ">
          
          {/* TOP */}
-        <div className="flex flex-col h-[196px] w-full">
+        <div className="flex flex-col h-49 w-full">
 
                     <div className="relative inline-flex items-center px-3 mb-4 w-fit">
                         <span className={`${b} top-0 right-0 border-t-2 border-r-2`} />
@@ -62,7 +62,7 @@ const Benefits = () => {
             {/* RIGHT */}
 
             <div className="flex flex-col gap-5 items-end justify-end">
-                <p className="text-[17px] text-gray-600 leading-[23.8px] text-right max-w-[340px]">Editorial lighting, smooth process, and portraits that feel like you. No awkward poses. Just real results, fast.</p>
+                <p className="text-[17px] text-gray-600 leading-[23.8px] text-right max-w-85">Editorial lighting, smooth process, and portraits that feel like you. No awkward poses. Just real results, fast.</p>
                 <Button variant="black" href="/contact" className="">Book a call</Button>
 
             </div>
@@ -72,7 +72,7 @@ const Benefits = () => {
 
         {/* MIDDLE */}
         <div className="w-full py-10">
-                <div className="grid grid-cols-3 grid-rows-2 gap-5 h-[782px]">
+                <div className="grid grid-cols-3 grid-rows-2 gap-5 h-195.5">
 
                     {/* [1] Wide top-left — before/after slider */}
                     <div className="relative col-span-2 row-span-1 overflow-hidden group border-4 border-white">
@@ -87,7 +87,7 @@ const Benefits = () => {
 
                     {/* [4] Tall right — spans 2 rows */}
                     <div className="relative col-span-1 row-span-2 overflow-hidden group border-4 border-white">
-                    <Image src={services[3].image} alt={services[3].title} fill className="object-cover" />
+                    <Image src={services[3].image} alt={services[3].title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                     <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 70%)" }} />
                     <div className="absolute inset-0 flex flex-col justify-between p-6">
                         {/* Navbar sits here in the design — skip if you have a global one */}
@@ -106,7 +106,7 @@ const Benefits = () => {
 
                     {/* [2] Bottom-left */}
                     <div className="relative col-span-1 row-span-1 overflow-hidden group border-4 border-white">
-                    <Image src={services[1].image} alt={services[1].title} fill className="object-cover" />
+                    <Image src={services[1].image} alt={services[1].title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                     <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 70%)" }} />
                     <div className="absolute inset-0 flex flex-col justify-between p-6">
                         <div />
@@ -124,7 +124,7 @@ const Benefits = () => {
 
                     {/* [3] Bottom-middle */}
                     <div className="relative col-span-1 row-span-1 overflow-hidden group border-4 border-white">
-                    <Image src={services[2].image} alt={services[2].title} fill className="object-cover" />
+                    <Image src={services[2].image} alt={services[2].title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                     <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 70%)" }} />
                     <div className="absolute inset-0 flex flex-col justify-between p-6">
                         <div />

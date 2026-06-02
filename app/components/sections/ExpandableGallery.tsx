@@ -101,12 +101,12 @@ export default function ExpandableGallery() {
               onClick={() => handleClick(img.id)}
               onMouseEnter={() => setHoveredId(img.id)}
               onMouseLeave={() => setHoveredId(null)}
-              className="relative overflow-hidden transition-all duration-500 ease-in-out"
+              className="relative no-custom-cursor overflow-hidden transition-all duration-500 ease-in-out"
               style={{
                 flex: expanded ? "0 0 30%" : "1 1 0%",
                 height: expanded ? "385px" : "268px",
                 alignSelf: "center",
-                cursor: expanded ? "default" : "none",
+                cursor: expanded ? "default" : "pointer",
               }}
             >
               {/* Image */}

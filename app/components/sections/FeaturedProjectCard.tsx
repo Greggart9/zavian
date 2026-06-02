@@ -44,6 +44,7 @@ export default function FeaturedProjectCard({ project }: { project: FeaturedProj
           src={project.heroImage}
           alt={project.title}
           fill
+          sizes="100vw"
           priority
           className="object-cover -z-10"
         />
@@ -94,7 +95,7 @@ export default function FeaturedProjectCard({ project }: { project: FeaturedProj
                       style={{ ...getThumbStyle(thumb.id) }}
                       onMouseEnter={() => setHoveredThumb(thumb.id)}
                     >
-                      <Image src={thumb.src} alt={thumb.alt} fill className="object-cover" />
+                      <Image src={thumb.src} alt={thumb.alt} fill sizes="90px" className="object-cover" />
                     </div>
                   ))}
                 </div>

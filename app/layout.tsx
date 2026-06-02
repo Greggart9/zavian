@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/ui/Navbar";
-import GlobalCursor from "./components/ui/GlobalCursor";
+import CustomCursor from "./components/ui/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,10 +32,10 @@ export default function RootLayout({
       <body style={{ cursor: "none" }}  className="min-h-full flex flex-col">
         <>
         
-          <GlobalCursor />
+          <CustomCursor />
 
               {/* Floating Navbar */}
-            <header className="fixed top-0 left-0 z-500 w-full px-12 py-8">
+            <header className="fixed top-0 left-0 z-500 w-full px-10 py-8">
               <Navbar />
             </header>
           {children}

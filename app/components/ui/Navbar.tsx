@@ -8,7 +8,7 @@ const navLinks = ["Home", "Projects", "Blogs", "About", "Contact"];
 
 const Navbar = () => {
   return (
-       <header className="w-full flex items-center justify-between ">
+       <header className="w-full flex items-center justify-between">
       {/* Logo */}
       <Link href="/">
         <Image
@@ -16,6 +16,7 @@ const Navbar = () => {
           alt="Logo"
           width={80}
           height={60}
+          sizes="80px"
         />
       </Link>
 

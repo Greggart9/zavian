@@ -6,6 +6,7 @@ import Services from '../components/sections/Services';
 import Style from '../components/sections/Style';
 import Benefits from '../components/sections/Benefits';
 import Testimonial from '../components/sections/Testimonial';
+import Blog from '../components/sections/Blog';
 
 const LandingPage = () => {
   return (
@@ -19,6 +20,7 @@ const LandingPage = () => {
      <Style />
      <Benefits />
      <Testimonial />
+     <Blog />
     </>
   )
 }

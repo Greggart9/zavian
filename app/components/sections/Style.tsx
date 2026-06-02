@@ -33,17 +33,17 @@ const Style = () => {
         {/* MIDDLE */}
         <div className="flex gap-3 justify-center  ">
 
-            <div className="w-[473px] h-[480px] relative border-8 border-white lines lines-top shadow-xl">
-                <Image src="/assets/asset 2.png" alt="Style 1" width={473} height={300} className="object-cover w-full h-[68.5%]" />
+            <div className="w-118.25 h-120 relative border-8 border-white lines lines-top shadow-xl">
+                <Image src="/assets/asset 2.png" alt="Style 1" width={473} height={300} sizes="(max-width: 768px) 100vw, 473px" className="object-cover w-full h-[68.5%]" />
                 
-                <div className="absolute  bottom-0 z-30 p-8 max-w-[100%] h-[147px] space-y-2 bg-custom1">
-                    <h1 className="text-[25px] leading-[30px] text-white">Lit Like Cinema</h1>
+                <div className="absolute  bottom-0 z-30 p-8 max-w-full h-36.75 space-y-2 bg-custom1">
+                    <h1 className="text-[25px] leading-7.5 text-white">Lit Like Cinema</h1>
                     <p className="text-[17px] leading-[23.8px] text-[#CCCCCC]">Light isn't just technical, it's emotional. I use it to build mood, not just exposure.</p>
                 </div>
             </div>
 
             <div className="w-[473px] h-[480px] relative border-8 border-white lines lines-bottom shadow-xl">
-               <Image src="/assets/asset 32.png" alt="Style 2" width={473} height={300} className="object-cover w-full h-[68.5%] absolute bottom-0" />
+               <Image src="/assets/asset 32.png" alt="Style 2" width={473} height={300} sizes="(max-width: 768px) 100vw, 473px" className="object-cover w-full h-[68.5%] absolute bottom-0" />
 
                 <div className="absolute inset-x-0 top-0 z-30 p-8 max-w-[100%] space-y-2 bg-black">
                     <h1 className="text-[25px] leading-[30px] text-white">Unscripted Emotion</h1>
@@ -52,7 +52,7 @@ const Style = () => {
             </div>
 
             <div className="w-[473px] h-[480px] relative border-8 border-white lines lines-top shadow-xl">
-                <Image src="/assets/asset 5.png" alt="Style 3" width={473} height={300} className="object-cover w-full h-[68.5%]" />
+                <Image src="/assets/asset 5.png" alt="Style 3" width={473} height={300} sizes="(max-width: 768px) 100vw, 473px" className="object-cover w-full h-[68.5%]" />
 
                     <div className="absolute inset-x-0 bottom-0 z-30 p-8 max-w-[100%] space-y-2 bg-custom1 ">
                     <h1 className="text-[25px] leading-[30px] text-white">Undeniably You</h1>

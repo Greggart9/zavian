@@ -30,10 +30,10 @@ const Services = () => {
                 {/* RIGHT */}
                 <div className='flex flex-1 gap-5 '>
                     <div className="">
-                        <Image className="object-cover object-[75%_25%] w-[200px] h-[120px] border-4 border-white shadow-2xl" width={200} height={120} src="/assets/asset 25.png" alt="Service 1" />
+                        <Image className="object-cover object-[75%_25%] w-50 h-30 border-4 border-white shadow-2xl" width={200} height={120} src="/assets/asset 25.png" alt="Service 1" />
                     </div>
                     <div className="">
-                        <Image className="object-cover object-[90%_10%] w-[200px] h-[120px] border-4 border-white shadow-2xl" width={200} height={120} src="/assets/asset 26.png" alt="Service 2" />
+                        <Image className="object-cover object-[90%_10%] w-50 h-30 border-4 border-white shadow-2xl" width={200} height={120} src="/assets/asset 26.png" alt="Service 2" />
                     </div>
                 </div>
 
@@ -52,10 +52,10 @@ const Services = () => {
                 {/* RIGHT */}
                 <div className='flex flex-1 gap-5 '>
                     <div className="">
-                        <Image className="object-cover object-[75%_25%] w-[200px] h-[120px] border-4 border-white shadow-2xl" width={200} height={120} src="/assets/asset 27.png" alt="Service 1" />
+                        <Image className="object-cover object-[75%_25%] w-50 h-30 border-4 border-white shadow-2xl" width={200} height={120} src="/assets/asset 27.png" alt="Service 1" />
                     </div>
                     <div className="">
-                        <Image className="object-cover object-[90%_10%] w-[200px] h-[120px] border-4 border-white shadow-2xl" width={200} height={120} src="/assets/asset 28.png" alt="Service 2" />
+                        <Image className="object-cover object-[90%_10%] w-50 h-30 border-4 border-white shadow-2xl" width={200} height={120} src="/assets/asset 28.png" alt="Service 2" />
                     </div>
                 </div>
 
@@ -74,10 +74,10 @@ const Services = () => {
                 {/* RIGHT */}
                 <div className='flex flex-1 gap-5 '>
                     <div className="">
-                        <Image className="object-cover object-[75%_25%] w-[200px] h-[120px] border-4 border-white shadow-2xl" width={200} height={120} src="/assets/asset 29.png" alt="Service 1" />
+                        <Image className="object-cover object-[75%_25%] w-50 h-30 border-4 border-white shadow-2xl" width={200} height={120} src="/assets/asset 29.png" alt="Service 1" />
                     </div>
                     <div className="">
-                        <Image className="object-cover object-[90%_10%] w-[200px] h-[120px] border-4 border-white shadow-2xl" width={200} height={120} src="/assets/asset 30.png" alt="Service 2" />
+                        <Image className="object-cover object-[90%_10%] w-50 h-30 border-4 border-white shadow-2xl" width={200} height={120} src="/assets/asset 30.png" alt="Service 2" />
                     </div>
                 </div>
 
