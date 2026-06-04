@@ -72,7 +72,7 @@ const Testimonial = () => {
                 </div>
                    
                    {/* SECOND */}
-                <div className="relative w-[345px] h-full bg-[#F2F7FA] border-4 border-white p-10 shadow-xl">
+                <div className="relative w-86.25 h-full bg-[#ebeff2] border-4 border-white p-10 shadow-xl">
                     <span className={`${c} top-2 right-2 border-t-3 border-r-3`} />
                     <span className={`${c} bottom-2 left-2 border-b-3 border-l-3`} />
 
@@ -80,7 +80,7 @@ const Testimonial = () => {
                             <span className="absolute text-[#e63b1f] text-[64px] top-8 left-8 -scale-x-100 -scale-y-100"><Quote size={54} strokeWidth={1.5} /></span>
 
                             {/* Quote */}
-                            <p className="text-black text-[20px] font-thin leading-[26px] flex-1 flex items-center mt-20">
+                            <p className="text-black text-[20px] font-thin leading-6.5 flex-1 flex items-center mt-20">
                                Fast, professional, and cinematic results. Zavian just gets it.
                             </p>
 
@@ -102,7 +102,7 @@ const Testimonial = () => {
                 </div>
                     
                     {/* THIRD */}
-                <div className="relative w-[345px] h-full bg-black border-4 border-white shadow-xl p-10">
+                <div className="relative w-86.25 h-full bg-black border-4 border-white shadow-xl p-10">
                     <span className={`${c} top-2 right-2 border-t-3 border-r-3`} />
                     <span className={`${c} bottom-2 left-2 border-b-3 border-l-3`} />
 
@@ -121,7 +121,7 @@ const Testimonial = () => {
                             <hr className="text-custom1 my-10" />
 
                             {/* Quote */}
-                            <p className="text-white text-[20px] font-thin leading-[26px] flex-1 flex items-center">
+                            <p className="text-white text-[20px] font-thin leading-6.5 flex-1 flex items-center">
                                Bold, editorial, and real. Our brand visuals instantly levelled up with his eye for style.
                             </p>
 
@@ -131,7 +131,7 @@ const Testimonial = () => {
                 </div>
 
                     {/* FOURTH */}
-                <div className="relative flex flex-col justify-end w-[345px] h-full bg-[#F2F7FA] border-4 border-white p-10 shadow-xl">
+                <div className="relative flex flex-col justify-end w-86.25 h-full bg-[#ebeff2] border-4 border-white p-10 shadow-xl">
                     <span className={`${c} top-2 right-2 border-t-3 border-r-3`} />
                     <span className={`${c} bottom-2 left-2 border-b-3 border-l-3`} />
 
@@ -140,7 +140,7 @@ const Testimonial = () => {
                             <span className="absolute text-[#e63b1f] text-[64px] top-8 left-8 -scale-x-100 -scale-y-100"><Quote size={54} strokeWidth={1.5} /></span>
 
                             {/* Quote */}
-                            <p className="text-black text-[20px] font-thin leading-[26px] flex-1 flex items-center mt-40">
+                            <p className="text-black text-[20px] font-thin leading-6.5 flex-1 flex items-center mt-40">
                                The shoot was so easy and natural. I’ve never felt more confident in front of a camera.
                             </p>
 

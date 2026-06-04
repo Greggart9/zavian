@@ -1,26 +1,28 @@
 import React from 'react'
 import Hero from '../components/sections/Hero';
-import FeaturedProject from '../components/sections/FeaturedProjectCard';
-import { featuredProjects } from "@/data/types/featuredProjects";
+import FeaturedProjectsStack from "../components/sections/FeaturedProjectsStack";
 import Services from '../components/sections/Services';
 import Style from '../components/sections/Style';
 import Benefits from '../components/sections/Benefits';
 import Testimonial from '../components/sections/Testimonial';
 import Blog from '../components/sections/Blog';
+import Pricing from '../components/sections/Pricing';
+import FAQ from '../components/sections/FAQ';
+import Slide from '../components/sections/Slide';
 
 const LandingPage = () => {
   return (
     <>
      <Hero />
-     <FeaturedProject project={featuredProjects[0]} />
-     <FeaturedProject project={featuredProjects[1]} />
-     <FeaturedProject project={featuredProjects[2]} />
-     <FeaturedProject project={featuredProjects[3]} />
+     <FeaturedProjectsStack />
      <Services />
      <Style />
      <Benefits />
      <Testimonial />
      <Blog />
+     <Pricing />
+      <FAQ /> 
+      <Slide />
     </>
   )
 }

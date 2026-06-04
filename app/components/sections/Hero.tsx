@@ -32,7 +32,7 @@ const Hero = () => {
 
         <div className="flex justify-between font-medium border-t border-gray-300 pt-6">
           <p>I’m Zavian, a seasoned photographer with 10 years of experience </p>
-          <p className="flex"><span className="pr-2"><Aperture /></span>5000+ Photos Snapped <span className="pr-2 pl-2"><Users strokeWidth={2} /></span> 145 Happy Clients</p>
+          <p className="flex"><span className="pr-2"><Aperture size={25} strokeWidth={1.5} /></span>5000+ Photos Snapped <span className="pr-2 pl-2"> <Users strokeWidth={2} /></span> 145 Happy Clients</p>
         </div>
 
 

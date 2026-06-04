@@ -56,7 +56,7 @@ export default function FeaturedProjectCard({ project }: { project: FeaturedProj
         <div className="relative z-150 px-10 py-20 flex flex-col justify-between w-full h-full">
 
           {/* TOP */}
-          <div className="h-[117px] w-full flex flex-col justify-between">
+          <div className="h-29.25 w-full flex flex-col justify-between">
             <span className=" w-fit px-2 py-1  text-white text-[15px] bg-red-800 text-center
               shadow-[inset_0_1px_2px_rgba(255,255,255,0.5),inset_0_-4px_12px_rgba(0,0,0,0.35)]">
               {project.category}
@@ -72,7 +72,7 @@ export default function FeaturedProjectCard({ project }: { project: FeaturedProj
 
               {/* LEFT */}
               <div>
-                <p className="text-white/90 text-[25px] leading-7 w-[500px]">
+                <p className="text-white/90 text-[25px] leading-7 w-125">
                   {project.description}
                 </p>
                 <Button href={project.href} variant="white" className="px-6 py-3 mt-4">
@@ -91,7 +91,7 @@ export default function FeaturedProjectCard({ project }: { project: FeaturedProj
                   {project.thumbnails.map((thumb) => (
                     <div
                       key={thumb.id}
-                      className="relative w-[90px] h-[90px] overflow-hidden border-3 border-white/80"
+                      className="relative w-22.5 h-22.5 overflow-hidden border-3 border-white/80"
                       style={{ ...getThumbStyle(thumb.id) }}
                       onMouseEnter={() => setHoveredThumb(thumb.id)}
                     >

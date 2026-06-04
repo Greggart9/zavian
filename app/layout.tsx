@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/ui/Navbar";
 import CustomCursor from "./components/ui/CustomCursor";
+import Footer from "./components/sections/Footer";
+import SmoothScroll from "./components/ui/SmoothScroll";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,16 +32,16 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body style={{ cursor: "none" }}  className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col">
         <>
         
           <CustomCursor />
-
-              {/* Floating Navbar */}
-            <header className="fixed top-0 left-0 z-500 w-full px-10 py-8">
-              <Navbar />
-            </header>
+          <Navbar />
+          <SmoothScroll>
           {children}
+
+          <Footer />
+        </SmoothScroll>
         
         </>
         

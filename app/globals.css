@@ -11,8 +11,8 @@
     background-image: repeating-linear-gradient(
       90deg,
       transparent,
-      transparent calc(12.5% - 1px),
-      rgba(0, 0, 0, 0.15) calc(12.5% - 1px),
+      transparent calc(12.5% - 2px),
+      rgba(0, 0, 0, 0.15) calc(12.5% - 2px),
       rgba(0, 0, 0, 0.15) 12.5%
     );
   }
@@ -81,7 +81,6 @@
   -webkit-mask-image: linear-gradient(to top, black 0%, black 25%, transparent 40%);
   mask-image: linear-gradient(to top, black 0%, black 25%, transparent 30%);
 }
-
 }
 
 
@@ -109,4 +108,43 @@ body {
   color: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   cursor: auto;
+}
+
+.marquee-row {
+  width: max-content;
+  will-change: transform;
+}
+
+.marquee-right {
+  animation: marqueeRight 28s linear infinite;
+}
+
+.marquee-left {
+  animation: marqueeLeft 28s linear infinite;
+}
+
+@keyframes marqueeRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes marqueeLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+#smooth-wrapper {
+  overflow: hidden;
+}
+
+#smooth-content {
+  will-change: transform;
 }

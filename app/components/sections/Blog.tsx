@@ -76,9 +76,9 @@ const Blog = () => {
       <div className="w-full py-10 flex gap-5">
 
         {/* LEFT */}
-        <div className="relative flex h-156 w-177.5 flex-col overflow-hidden border-8 border-white bg-white shadow-xl">
+        <div className="group relative flex no-custom-cursor h-156 w-177.5 flex-col overflow-hidden border-8 border-white bg-white shadow-xl cursor-pointer">
           {/* IMAGE AREA */}
-          <div className="relative h-87.5 w-full overflow-hidden">
+          <div className="group relative h-87.5 w-full overflow-hidden lines lines-top">
             <Image
               src="/assets/asset 12.png"
               alt=""
@@ -86,6 +86,14 @@ const Blog = () => {
               sizes="(max-width: 768px) 100vw, 710px"
               className="object-cover"
             />
+
+            {/* bottom-half overlay */}
+              <div className="absolute left-0 top-0 h-1/2 w-full translate-y-full bg-custom1/55 opacity-0 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100" />
+
+              {/* center plus button */}
+              <div className="absolute left-1/2 top-1/2 flex h-22 w-22 -translate-x-1/2 -translate-y-1/2 scale-75 items-center justify-center rounded-full bg-white/20 opacity-0 backdrop-blur-xs transition-all duration-500 ease-out group-hover:scale-100 group-hover:opacity-100">
+                <span className="text-5xl font-light leading-none text-white"><Plus size={25} strokeWidth={1.5} /></span>
+              </div>
 
             {/* IMAGE FADE ONLY */}
             <div
@@ -118,8 +126,8 @@ const Blog = () => {
               </span>
 
               {/* LINK */}
-              <div className="flex self-end text-[20px] font-normal leading-6.5 text-black">
-                Read more <ArrowUpRight size={25} strokeWidth={1.5} />
+              <div className="flex self-end text-[20px] font-normal leading-6.5 text-black transition-colors duration-300 group-hover:text-custom1">
+                Read more <ArrowUpRight className=" transition-transform duration-300 ease-in-out group-hover:rotate-45" size={22} strokeWidth={1.5} />
               </div>
             </div>
           </div>
@@ -129,7 +137,7 @@ const Blog = () => {
         <div className="w-177.5 h-87.5 relative flex flex-col gap-6 no-custom-cursor">
             {/* RIGHT-TOP */}
            
-            <div className="group flex w-full max-w-177.5 h-75 bg-white p-2 shadow-xl">
+            <div className="group flex w-full max-w-177.5 h-75 bg-white p-2 shadow-xl cursor-pointer">
               <div className="group relative w-81.75 h-71 shrink-0 overflow-hidden lines lines-top">
               <img
                 src="/assets/asset 43.png"
@@ -141,7 +149,7 @@ const Blog = () => {
               <div className="absolute left-0 top-1/2 h-1/2 w-full -translate-y-full bg-custom1/45 opacity-0 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100" />
 
               {/* center plus button */}
-              <div className="absolute left-1/2 top-1/2 flex h-22 w-22 -translate-x-1/2 -translate-y-1/2 scale-75 items-center justify-center rounded-full bg-white/20 opacity-0 backdrop-blur-md transition-all duration-500 ease-out group-hover:scale-100 group-hover:opacity-100">
+              <div className="absolute left-1/2 top-1/2 flex h-22 w-22 -translate-x-1/2 -translate-y-1/2 scale-75 items-center justify-center rounded-full bg-white/20 opacity-0 backdrop-blur-xs transition-all duration-500 ease-out group-hover:scale-100 group-hover:opacity-100">
                 <span className="text-5xl font-light leading-none text-white"><Plus size={25} strokeWidth={1.5} /></span>
               </div>
             </div>
@@ -163,13 +171,13 @@ const Blog = () => {
                 </p>
 
                 <div className="mt-6 flex text-[20px] font-medium leading-6.5 text-black transition-colors duration-300 group-hover:text-custom1">
-                  Read more <ArrowUpRight size={25} strokeWidth={1.5} />
+                  Read more <ArrowUpRight className="transition-transform duration-300 ease-in-out group-hover:rotate-45" size={22} strokeWidth={1.5} />
                 </div>
               </div>
             </div>
 
             {/* RIGHT-BOTTOM */}
-            <div className="group flex w-full max-w-177.5 h-75  bg-white p-2 shadow-xl ">
+            <div className="group flex w-full max-w-177.5 h-75  bg-white p-2 shadow-xl cursor-pointer">
               <div className="group relative w-81.75 h-71 shrink-0 overflow-hidden lines lines-top">
               <img
                 src="/assets/asset 44.png"
@@ -202,7 +210,7 @@ const Blog = () => {
                 </p>
 
                 <div className="mt-6 text-[20px] flex leading-6.5 font-medium text-black transition-colors duration-300 group-hover:text-custom1">
-                  Read more <ArrowUpRight size={25} strokeWidth={1.5} />
+                  Read more <ArrowUpRight className="transition-transform duration-300 ease-in-out group-hover:rotate-45" size={22} strokeWidth={1.5} />
                 </div>
               </div>
             </div>

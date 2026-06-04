@@ -72,7 +72,7 @@ export default function ExpandableGallery() {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <div className="relative w-14 h-14">
+          <div className="relative w-12 h-12">
             <span className="absolute top-0 left-0 w-3 h-3 border-t-3 border-l-3 border-white/60" />
             <span className="absolute top-0 right-0 w-3 h-3 border-t-3 border-r-3 border-white/60" />
             <span className="absolute bottom-0 left-0 w-3 h-3 border-b-3 border-l-3 border-white/60" />
