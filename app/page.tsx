@@ -1,10 +1,14 @@
+
 import React from 'react'
-import LandingPage from './pages/LandingPage';
+import Home from './home/page';
+
+
 
 const page = () => {
   return (
     <>
-      <LandingPage />
+    <Home />
+      
     </>
   )
 }

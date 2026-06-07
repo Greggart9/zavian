@@ -112,6 +112,7 @@ export default function FeaturedProjectCard({ project }: { project: FeaturedProj
             </div>
 
           </div>
+          
         </div>
       </div>
     </section>

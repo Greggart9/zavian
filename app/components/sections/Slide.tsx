@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Image from "next/image";
 import Button from "../ui/Button";
@@ -32,7 +33,7 @@ const bottomImages = [
           {[...topImages, ...topImages].map((src, index) => (
             <div
               key={`top-${index}`}
-              className="relative h-62.5 w-[320px] shrink-0 overflow-hidden rounded-xs"
+              className="relative h-62.5 w-[320px] shrink-0 overflow-hidden rounded-sm"
             >
               <Image src={src} alt="" fill className="object-cover" />
             </div>

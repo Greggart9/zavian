@@ -47,45 +47,51 @@ const Services = () => {
     <>
       <section
         ref={sectionRef}
-        className="flex h-fit flex-col bg-[#f2f7fa] px-10 py-20"
+        className="flex h-fit flex-col bg-[#f2f7fa] px-10 py-10"
       >
         {/* TOP */}
-        <div>
-          <p className="w-325 text-[60px] font-thin leading-17.25">
-            I create bold <span className="text-custom1">portraits</span>,
-            editorial <span className="text-custom1">headshots</span>, and{" "}
-            <span className="text-custom1">cinematic event</span> coverage
-            capturing real emotion with lighting and style that feel powerful,
-            timeless, and true to who you are.
-          </p>
-        </div>
+        <div className="w-full bg-[#eef6fa] ">
+            <p className="max-w-375 text-[56px] font-thin leading-tight tracking-[-0.04em] text-black">
+                For me, photography isn’t just about beautiful images -<br />
+                it’s about capturing what words miss: your quiet
+                <br />
+                strength, freedom, and timeless presence.
+            </p>
+
+            <div className="mt-24 border-t border-black/35 pt-5">
+                <div className="flex items-center justify-between text-[18px] leading-none text-black/75">
+                <p>[ ZAVIAN&quot;S SERVICES ]</p>
+                <p>Bold portraits. Editorial frames.</p>
+                </div>
+            </div>
+            </div>
 
         {/* MIDDLE */}
         <div
           ref={middleRef}
-          className="mt-20 flex origin-center flex-col gap-5"
+          className="mt-25 flex origin-center flex-col gap-5"
         >
+
           {/* SERVICE 1 */}
-          <div className="service-card flex justify-between items-center bg-[#F2F7FA] h-45 gap-10 p-7.5 border-4 border-white shadow-sm">
+           <div className="service-card flex justify-between bg-[#F2F7FA] gap-10 p-7.5 border-4 border-white shadow-sm">
             {/* LEFT */}
-            <div className="flex flex-[2.2] flex-col gap-3">
-              <span className="flex justify-between">
-                <p className="text-[32px] leading-[38.4px]">
-                  Portraits & Headshots
-                </p>
-                <p>[ 1 ]</p>
-              </span>
-
-              <hr className="border-gray-300" />
-
+            <div className="flex flex-col justify-between flex-3">
+                <div >
+                    <span className="flex justify-between">
+                        <p className="text-[32px] leading-[38.4px]">Portraits & Headshots</p>
+                        <p>[ 1 ]</p>
+                    </span> 
+                    <hr className="border-gray-300 mt-3" />          
+                </div>
               <p className="text-[17px] leading-[23.8px] text-gray-500">
-                Showcase your truest self with clarity. Bold, clean
-                <br /> portraits crafted with cinematic light.
+                Showcase your truest self with clarity. Bold, clean<br /> portraits crafted with cinematic light.
+                
               </p>
+
             </div>
 
             {/* RIGHT */}
-            <div className="flex flex-1 gap-5">
+             <div className="flex flex-col gap-5">
               <div>
                 <Image
                   className="h-30 w-50 border-4 border-white object-cover object-[75%_25%] shadow-2xl"
@@ -106,29 +112,29 @@ const Services = () => {
                 />
               </div>
             </div>
-          </div>
 
-          {/* SERVICE 2 */}
-          <div className="service-card flex justify-between items-center bg-[#F2F7FA] h-45 gap-10 p-7.5 border-4 border-white shadow-sm">
+           </div>
+
+            {/* SERVICE 2 */}
+           <div className="service-card flex justify-between bg-[#F2F7FA] gap-10 p-7.5 border-4 border-white shadow-sm">
             {/* LEFT */}
-            <div className="flex flex-[2.2] flex-col gap-3">
-              <span className="flex justify-between">
-                <p className="text-[32px] leading-[38.4px]">
-                  Commercial & Branding
-                </p>
-                <p>[ 2 ]</p>
-              </span>
-
-              <hr className="border-gray-300" />
-
+            <div className="flex flex-col justify-between flex-3">
+                <div >
+                    <span className="flex justify-between">
+                        <p className="text-[32px] leading-[38.4px]">Commercial & Branding</p>
+                        <p>[ 2 ]</p>
+                    </span> 
+                    <hr className="border-gray-300 mt-3" />          
+                </div>
               <p className="text-[17px] leading-[23.8px] text-gray-500">
-                Stand out with visuals that sell. Product, campaign,
-                <br /> and brand shoots with style.
+                Stand out with visuals that sell. Product, campaign,<br /> and brand shoots with style.
+                
               </p>
+
             </div>
 
             {/* RIGHT */}
-            <div className="flex flex-1 gap-5">
+             <div className="flex flex-col gap-5">
               <div>
                 <Image
                   className="h-30 w-50 border-4 border-white object-cover object-[75%_25%] shadow-2xl"
@@ -149,29 +155,29 @@ const Services = () => {
                 />
               </div>
             </div>
-          </div>
+
+           </div>
 
           {/* SERVICE 3 */}
-          <div className="service-card flex justify-between items-center bg-[#F2F7FA] h-45 gap-10 p-7.5 border-4 border-white shadow-sm">
+           <div className="service-card flex justify-between bg-[#F2F7FA] gap-10 p-7.5 border-4 border-white shadow-sm">
             {/* LEFT */}
-            <div className="flex flex-[2.2] flex-col gap-3">
-              <span className="flex justify-between">
-                <p className="text-[32px] leading-[38.4px]">
-                  Creative Editorials
-                </p>
-                <p>[ 3 ]</p>
-              </span>
-
-              <hr className="border-gray-300" />
-
+            <div className="flex flex-col justify-between flex-3">
+                <div >
+                    <span className="flex justify-between">
+                        <p className="text-[32px] leading-[38.4px]">Creative Editorials</p>
+                        <p>[ 3 ]</p>
+                    </span> 
+                    <hr className="border-gray-300 mt-3" />          
+                </div>
               <p className="text-[17px] leading-[23.8px] text-gray-500">
-                Concept-led shoots with striking mood. Where art
-                <br /> direction meets timeless imagery.
+                Concept-led shoots with striking mood. Where art <br /> direction meets timeless imagery.
+                
               </p>
+
             </div>
 
             {/* RIGHT */}
-            <div className="flex flex-1 gap-5">
+             <div className="flex flex-col gap-5">
               <div>
                 <Image
                   className="h-30 w-50 border-4 border-white object-cover object-[75%_25%] shadow-2xl"
@@ -192,18 +198,12 @@ const Services = () => {
                 />
               </div>
             </div>
-          </div>
+
+           </div>
+
+
         </div>
 
-        {/* BOTTOM */}
-        <div className="mt-10">
-          <hr className="border-gray-300" />
-
-          <span className="flex justify-between pt-3.5 text-[17px]">
-            <p>[ 1 ]</p>
-            <p>Explore Zavian's Services</p>
-          </span>
-        </div>
       </section>
     </>
   );

@@ -50,7 +50,7 @@ const Navbar = () => {
       </Link>
 
       {/* Nav links stay fixed */}
-      <nav className="flex items-center gap-1 bg-black/85 px-2 py-1 shadow-xl backdrop-blur-md border-2 border-white">
+      <nav className="flex items-center gap-1 bg-black/80 px-2 py-1 shadow-xl backdrop-blur-md border-2 border-white">
         {navLinks.map((link) => (
           <Link
             key={link}

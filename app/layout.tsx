@@ -32,19 +32,13 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <>
-        
-          <CustomCursor />
-          <Navbar />
-          <SmoothScroll>
+      <body className={`min-h-fullflex flex-col`}>
+        <CustomCursor />
+        <Navbar />
+        <SmoothScroll>
           {children}
-
           <Footer />
         </SmoothScroll>
-        
-        </>
-        
       </body>
     </html>
   );

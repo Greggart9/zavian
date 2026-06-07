@@ -61,7 +61,7 @@ const FAQ = () => {
                 key={faq.question}
                 type="button"
                 onClick={() => setOpenIndex(isOpen ? null : index)}
-                className="bg-[#f2f7fa] p-5 text-left transition-all duration-600"
+                className="bg-[#f2f7fa] p-5 text-left transition-all duration-600 cursor-pointer"
               >
                 <div className="flex items-start justify-between gap-6 w-179.75">
                   <div>
@@ -127,7 +127,7 @@ const FAQ = () => {
           <div className="mt-auto flex h-20 items-center gap-6">
             <div className="relative h-20 w-20 overflow-hidden rounded-sm border-4 border-white shadow-sm">
               <Image
-                src="/assets/asset 46.png"
+                src="/assets/asset 67.png"
                 alt="Zavian"
                 fill
                 className="object-cover"

@@ -19,34 +19,43 @@ const Footer = () => {
   const footerRef = useRef<HTMLElement | null>(null);
   const innerRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+useEffect(() => {
+  gsap.registerPlugin(ScrollTrigger);
 
-    if (!footerRef.current || !innerRef.current) return;
+  if (!footerRef.current || !innerRef.current) return;
 
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        innerRef.current,
-        {
-          scale: 0.92,
-          y: 80,
+  const ctx = gsap.context(() => {
+    const animation = gsap.fromTo(
+      innerRef.current,
+      {
+        scale: 0.92,
+        y: 80,
+      },
+      {
+        scale: 1,
+        y: 0,
+        ease: "none",
+        scrollTrigger: {
+          trigger: footerRef.current,
+          start: "top bottom",
+          end: "top top",
+          scrub: 1,
+          invalidateOnRefresh: true,
         },
-        {
-          scale: 1,
-          y: 0,
-          ease: "none",
-          scrollTrigger: {
-            trigger: footerRef.current,
-            start: "top bottom",
-            end: "top top",
-            scrub: 1,
-          },
-        }
-      );
-    }, footerRef);
+      }
+    );
 
-    return () => ctx.revert();
-  }, []);
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
+
+    return () => {
+      animation.kill();
+    };
+  }, footerRef);
+
+  return () => ctx.revert();
+}, []);
 
   const b = "absolute h-3 w-3 border-custom1";
 
@@ -129,6 +138,7 @@ const Footer = () => {
               fill
               sizes="50vw"
               className="object-cover"
+              onLoad={() => ScrollTrigger.refresh()}
             />
           </div>
         </div>

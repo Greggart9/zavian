@@ -30,7 +30,7 @@ const Testimonial = () => {
             </div>
 
             {/* MIDDLE */}
-            <div className="flex gap-5 justify-center h-97.75 mt-10">
+            <div className="flex gap-5 justify-center h-97.75  mt-10">
                     
                     {/* FIRST */}
                 <div className="relative w-86.25 h-full border-4 border-white p-10 shadow-xl overflow-hidden">
