@@ -15,12 +15,12 @@ const page = () => {
         <div className='w-full h-fit flex flex-col items-center justify-center gap-5 px-10 pt-35 pb-20'>
 
             <div className="relative inline-flex items-center px-3 mb-4 w-fit">
-                        <span className={`${b} top-0 right-0 border-t-2 border-r-2`} />
-                        <span className={`${b} bottom-0 left-0 border-b-2 border-l-2`} />
-                        <span className="text-[17px] leading-[23.8px] font-thin text-gray-500">BLOG</span>
+                        <span className={`${b} top-0 right-0 border-t-3 border-r-3`} />
+                        <span className={`${b} bottom-0 left-0 border-b-3 border-l-3`} />
+                        <span className="text-[17px] leading-[23.8px] font-light text-gray-700">BLOG</span>
              </div>
-          <h1 className='text-[78px] font-thin leading-[92.4px] text-center'>Photography Tips<br/> <span className='text-custom1'>& Stories</span></h1>
-          <p className='text-[25px] leading-7.5 font-thin max-w-lg text-center text-gray-500'>Discover photography tips, creative techniques, and behind-the-scenes stories.</p>
+          <h1 className='text-[84px] font-light leading-[92.4px] text-center'>Photography Tips<br/> <span className='text-custom1'>& Stories</span></h1>
+          <p className='text-[25px] leading-7.5 font-normal max-w-lg text-center text-gray-900'>Discover photography tips, creative techniques, and behind-the-scenes stories.</p>
         </div>
 
 

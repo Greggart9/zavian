@@ -82,7 +82,7 @@ useEffect(() => {
               />
             </Link>
 
-            <h2 className="text-[60px] font-thin leading-17.25 text-black">
+            <h2 className="text-[72px] font-light leading-[79.2px] text-black">
               Your Story,
               <br />
               <span className="text-custom1">Captured Boldly.</span>
@@ -95,16 +95,16 @@ useEffect(() => {
 
           <div className="max-w-114.75">
             <div className="relative mb-9 inline-flex w-fit items-center px-2 py-1">
-              <span className={`${b} left-0 bottom-0 border-b-2 border-l-2`} />
-              <span className={`${b} right-0 top-0 border-t-2 border-r-2`} />
-              <span className="text-[17px] leading-none text-black">
+              <span className={`${b} left-0 bottom-0 border-b-3 border-l-3`} />
+              <span className={`${b} right-0 top-0 border-t-3 border-r-3`} />
+              <span className="text-[17px] leading-none text-gray-700 font-light tracking-widest">
                 NAVIGATION
               </span>
             </div>
 
             <div className="">
 
-                <ul className="flex gap-6 text-[20px] justify-between leading-6.5  text-black/80 flex-wrap">
+                <ul className="flex gap-6 text-[20px] justify-between leading-6.5  text-gray-700 flex-wrap">
                     <li className="group flex gap-2 items-center cursor-pointer hover:text-custom1 transition-colors duration-300">Projects <ArrowUpRight className="transition-transform duration-300 ease-in-out group-hover:rotate-45" size={20} /></li>
                     <li className="group flex gap-2 items-center cursor-pointer hover:text-custom1 transition-colors duration-300">Blogs <ArrowUpRight className="transition-transform duration-300 ease-in-out group-hover:rotate-45" size={20} /></li>
                     <li className="group flex gap-2 items-center cursor-pointer hover:text-custom1 transition-colors duration-300">About <ArrowUpRight className="transition-transform duration-300 ease-in-out group-hover:rotate-45" size={20} /></li>

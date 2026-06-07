@@ -132,7 +132,7 @@ export default function BeforeAfterSlider({
       {/* Text content */}
       <div className="pointer-events-none absolute inset-0 z-20 flex flex-col justify-between p-6">
         {label && (
-          <h2 className="w-55 text-[28px] font-bold leading-tight text-white">
+          <h2 className="w-55 text-[28px] font-normal leading-tight text-white">
             {label}
           </h2>
         )}

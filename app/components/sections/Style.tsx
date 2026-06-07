@@ -13,14 +13,14 @@ const Style = () => {
         {/* TOP */}
         <div className="text-center">
             <div className="relative inline-flex items-center px-3">
-                <span className={`${b} top-0 right-0 border-t-2 border-r-2`} />
-                <span className={`${b} bottom-0 left-0 border-b-2 border-l-2`} />
-                <span className="text-sm font-thin tracking-widest text-gray-500">STYLE</span>
+                <span className={`${b} top-0 right-0 border-t-3 border-r-3`} />
+                <span className={`${b} bottom-0 left-0 border-b-3 border-l-3`} />
+                <span className="text-sm font-light tracking-widest text-gray-700">STYLE</span>
             </div>
 
-            <p className="text-6xl font-thin pt-3">Zavian’s Signature</p>
-            <p className="text-6xl font-thin text-custom1 pt-4">Portrait Style</p>
-            <p className="text-[18px] text-gray-700 max-w-lg pt-5">
+            <p className="text-[72px] font-light pt-3">Zavian’s Signature</p>
+            <p className="text-[72px] font-light leading-17.5 text-custom1">Portrait Style</p>
+            <p className="text-[17px] text-gray-700 max-w-lg pt-3">
                 Raw. Cinematic. Unfiltered. Every frame I shoot is built
                 on light, emotion, and attitude. No cliche presets
                 just real presence, captured with precision.
@@ -31,7 +31,7 @@ const Style = () => {
         </div>
 
         {/* MIDDLE */}
-        <div className="flex gap-3 justify-center  ">
+        <div className="flex gap-3 justify-center mt-4 ">
 
             <div className="w-118.25 h-120 relative border-8 border-white lines lines-top shadow-xl">
                 <Image src="/assets/asset 2.png" alt="Style 1" width={473} height={300} sizes="(max-width: 768px) 100vw, 473px" className="object-cover w-full h-[68.5%]" />

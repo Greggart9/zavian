@@ -80,20 +80,20 @@ const Pricing = () => {
         {/* TOP */}
         <div>
           <div className="relative inline-flex items-center px-3 mb-4 w-fit">
-            <span className={`${b} top-0 right-0 border-t-2 border-r-2`} />
-            <span className={`${b} bottom-0 left-0 border-b-2 border-l-2`} />
-            <span className="text-sm font-thin tracking-widest text-gray-500">
+            <span className={`${b} top-0 right-0 border-t-3 border-r-3`} />
+            <span className={`${b} bottom-0 left-0 border-b-3 border-l-3`} />
+            <span className="text-sm font-light tracking-widest text-gray-700">
               PRICING
             </span>
           </div>
 
           <div>
-            <h1 className="text-[72px] font-thin leading-[79.2px] text-black">
+            <h1 className="text-[72px] font-light leading-[79.2px] text-black">
               Effortless Booking. <br />{" "}
               <span className="text-custom1">Honest Pricing</span>
             </h1>
 
-            <p className="mt-10 max-w-100 text-[17px] leading-[23.8px] text-black/75">
+            <p className="mt-10 max-w-100 text-[17px] leading-[23.8px] text-gray-700">
               Clear packages, honest rates, and results worth every penny. No
               hidden fees, just effortless booking and bold portraits delivered
               fast.
@@ -112,10 +112,10 @@ const Pricing = () => {
       </div>
 
       {/* RIGHT SIDE - sticky stacked cards */}
-      <div className="pricing-cards relative flex w-166 flex-col gap-24 ">
+      <div className="pricing-cards  relative flex w-166 flex-col gap-24 ">
         {/* CARD ONE */}
         <div className="pricing-card relative p-10 w-166 h-128 border-8 bg-custom1 border-white shadow-xs text-white">
-          <h1 className="text-[24px] leading-[28.8px] font-medium">
+          <h1 className="text-[32px] leading-[38.4px] font-medium">
             Portraits & Headshots
           </h1>
           <p className="text-white/65 text-[20px] leading-6.5">
@@ -164,10 +164,10 @@ const Pricing = () => {
 
         {/* CARD TWO */}
         <div className="pricing-card relative p-10 w-166 h-128 border-8 bg-[#ebeff2] border-white shadow-xs text-black">
-          <h1 className="text-[24px] leading-[28.8px] font-medium">
+          <h1 className="text-[32px] leading-[38.4px] font-medium">
             Commercial & Branding
           </h1>
-          <p className="text-black/65 text-[20px] leading-6.5">
+          <p className="text-gray-700 text-[20px] leading-6.5">
             Brand-focused shoots for products, teams, and campaigns.
           </p>
           <p className="text-[32px] leading-[38.4px] py-4 flex items-center gap-2">
@@ -175,7 +175,7 @@ const Pricing = () => {
             <span className="text-[15px] leading-[22.5px]">/ session</span>
           </p>
 
-          <ul className="text-[15px] text-black/75 gap-1.5 flex flex-col">
+          <ul className="text-[15px] text-gray-700 gap-1.5 flex flex-col">
             <li className="flex gap-1 items-center">
               <CircleCheck className="text-custom1" size={15} />
               2-hour shoot
@@ -213,10 +213,10 @@ const Pricing = () => {
 
         {/* CARD THREE */}
         <div className="pricing-card relative p-10 w-166 h-128 border-8 bg-[#ebeff2] border-white shadow-xs text-black">
-          <h1 className="text-[24px] leading-[28.8px] font-medium">
+          <h1 className="text-[32px] leading-[38.4px] font-medium">
             Creative Editorials
           </h1>
-          <p className="text-black/65 text-[20px] leading-6.5">
+          <p className="text-gray-700 text-[20px] leading-6.5">
             Concept-driven editorial shoots with bold styling.
           </p>
           <p className="text-[32px] leading-[38.4px] py-4 flex items-center gap-2">
@@ -224,7 +224,7 @@ const Pricing = () => {
             <span className="text-[15px] leading-[22.5px]">/ session</span>
           </p>
 
-          <ul className="text-[15px] text-black/75 gap-1.5 flex flex-col">
+          <ul className="text-[15px] text-gray-700 gap-1.5 flex flex-col">
             <li className="flex gap-1 items-center">
               <CircleCheck className="text-custom1" size={15} />
               4-hour shoot

@@ -46,16 +46,16 @@ const Benefits = () => {
         <div className="flex flex-col h-49 w-full">
 
                     <div className="relative inline-flex items-center px-3 mb-4 w-fit">
-                        <span className={`${b} top-0 right-0 border-t-2 border-r-2`} />
-                        <span className={`${b} bottom-0 left-0 border-b-2 border-l-2`} />
-                        <span className="text-sm font-thin tracking-widest text-gray-500">BENEFITS</span>
+                        <span className={`${b} top-0 right-0 border-t-3 border-r-3`} />
+                        <span className={`${b} bottom-0 left-0 border-b-3 border-l-3`} />
+                        <span className="text-sm font-light tracking-widest text-gray-700">BENEFITS</span>
                     </div>
             
             <div className="flex gap-10 justify-between">
             {/* LEFT */}
             <div>
 
-            <h1 className="text-[72px] leading-[79.2px] font-thin text-black">Why Clients Choose <br /><span className="text-custom1">Zavian</span></h1>
+            <h1 className="text-[72px] leading-[79.2px] font-light text-black">Why Clients Choose <br /><span className="text-custom1">Zavian</span></h1>
 
             </div>
 
@@ -72,6 +72,7 @@ const Benefits = () => {
 
         {/* MIDDLE */}
         <div className="w-full py-10">
+
                 <div className="grid grid-cols-3 grid-rows-2 gap-5 h-195.5">
 
                     {/* [1] Wide top-left — before/after slider */}

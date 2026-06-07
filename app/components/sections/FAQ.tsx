@@ -101,20 +101,20 @@ const FAQ = () => {
         <div className="flex h-auto w-150 flex-col pt-1">
           <div>
             <div className="relative mb-4 inline-flex w-fit items-center px-2 py-1">
-              <span className={`${b} left-0 bottom-0 border-b-2 border-l-2`} />
-              <span className={`${b} right-0 top-0 border-t-2 border-r-2`} />
-              <span className="text-[16px] leading-none text-black/65">
+              <span className={`${b} left-0 bottom-0 border-b-3 border-l-3`} />
+              <span className={`${b} right-0 top-0 border-t-3 border-r-3`} />
+              <span className="text-[16px] leading-none text-gray-700 font-light tracking-widest">
                 FAQ
               </span>
             </div>
 
-            <h2 className="text-[72px] font-thin leading-[79.2px] text-black">
+            <h2 className="text-[72px] font-light leading-[79.2px] text-black">
               Your Questions
               <br />
               <span className="text-custom1">Answered here</span>
             </h2>
 
-            <p className="mt-5 max-w-100 text-[17px] leading-[23.8px] text-black/75">
+            <p className="mt-5 max-w-100 text-[17px] leading-[23.8px] text-gray-700">
               From booking to final edits, here’s everything you need to know
               before stepping in front of my lens.
             </p>

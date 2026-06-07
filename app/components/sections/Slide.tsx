@@ -60,22 +60,22 @@ const bottomImages = [
       <div className="relative z-10 -mt-45 flex items-end justify-between px-10 pb-20">
         <div>
           <div className="relative mb-6 inline-flex w-fit items-center px-2 py-1">
-            <span className={`${b} left-0 bottom-0 border-b-2 border-l-2`} />
-            <span className={`${b} right-0 top-0 border-t-2 border-r-2`} />
-            <span className="text-[17px] leading-none text-black/65">
+            <span className={`${b} left-0 bottom-0 border-b-3 border-l-3`} />
+            <span className={`${b} right-0 top-0 border-t-3 border-r-3`} />
+            <span className="text-[17px] font-light leading-none text-gray-700">
               Let’s Make It Happen
             </span>
           </div>
 
-          <h2 className="text-[72px] font-thin leading-[79.2px] text-black">
+          <h2 className="text-[72px] font-light leading-[79.2px] text-black">
             Ready For Your
             <br />
             <span className="text-custom1">Best Shot?</span>
           </h2>
         </div>
 
-        <div className="flex max-w-125 flex-col items-end gap-10">
-          <p className="text-right text-[17px] leading-[23.8px] text-black/75">
+        <div className="flex max-w-85 flex-col items-end gap-10">
+          <p className="text-right text-[17px] leading-[23.8px] text-gray-700">
             Every face tells a different story, and every frame is a proof of
             moments captured with purpose and style. Yours could be next.
           </p>

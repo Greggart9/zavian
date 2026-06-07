@@ -16,7 +16,7 @@ const Hero = () => {
 
          {/* HERO CONTENT */}
         <div className="pt-26 mb-8 flex justify-between relative ">
-          <h1 className="text-[84px] leading-23 font-thin ">Capturing <span className="text-custom1">Moments</span> & <br/> Crafting Beautiful <span className="text-custom1">Stories</span></h1>
+          <h1 className="text-[80px] leading-23 font-light ">Capturing <span className="text-custom1">Moments</span> & <br/> Crafting Beautiful <span className="text-custom1">Stories</span></h1>
            
           <Button className="self-end" href="/contact" variant="black">
             Get in touch

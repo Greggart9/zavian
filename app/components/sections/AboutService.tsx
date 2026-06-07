@@ -51,7 +51,7 @@ const Services = () => {
       >
         {/* TOP */}
         <div className="w-full bg-[#eef6fa] ">
-            <p className="max-w-375 text-[56px] font-thin leading-tight tracking-[-0.04em] text-black">
+            <p className="max-w-375 text-[50px] font-light leading-tight tracking-[-0.04em] text-black">
                 For me, photography isn’t just about beautiful images -<br />
                 it’s about capturing what words miss: your quiet
                 <br />
@@ -83,7 +83,7 @@ const Services = () => {
                     </span> 
                     <hr className="border-gray-300 mt-3" />          
                 </div>
-              <p className="text-[17px] leading-[23.8px] text-gray-500">
+              <p className="text-[17px] leading-[23.8px] text-gray-700">
                 Showcase your truest self with clarity. Bold, clean<br /> portraits crafted with cinematic light.
                 
               </p>
@@ -126,7 +126,7 @@ const Services = () => {
                     </span> 
                     <hr className="border-gray-300 mt-3" />          
                 </div>
-              <p className="text-[17px] leading-[23.8px] text-gray-500">
+              <p className="text-[17px] leading-[23.8px] text-gray-700">
                 Stand out with visuals that sell. Product, campaign,<br /> and brand shoots with style.
                 
               </p>
@@ -169,7 +169,7 @@ const Services = () => {
                     </span> 
                     <hr className="border-gray-300 mt-3" />          
                 </div>
-              <p className="text-[17px] leading-[23.8px] text-gray-500">
+              <p className="text-[17px] leading-[23.8px] text-gray-700">
                 Concept-led shoots with striking mood. Where art <br /> direction meets timeless imagery.
                 
               </p>

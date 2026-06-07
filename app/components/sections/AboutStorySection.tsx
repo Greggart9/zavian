@@ -32,7 +32,7 @@ export default function AboutStorySection() {
       <div className="relative z-10">
         {/* TEXT */}
         <div className="max-w-312.5">
-          <p className="text-[48px] font-thin leading-tight tracking-[-0.04em] text-black">
+          <p className="text-[48px] font-light leading-tight tracking-[-0.04em] text-black">
             Based in{" "}
             <span className="text-custom1">Copenhagen, Denmark</span>, I’m a
             portrait and
@@ -42,7 +42,7 @@ export default function AboutStorySection() {
             through light, mood, and honest expression.
           </p>
 
-          <p className="mt-14 text-[52px] font-thin leading-tight tracking-[-0.04em] text-black">
+          <p className="mt-14 text-[52px] font-light leading-tight tracking-[-0.04em] text-black">
             Over the past decade, I’ve photographed{" "}
             <span className="text-custom1">models,</span>
             <br />

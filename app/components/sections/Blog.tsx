@@ -47,15 +47,15 @@ const Blog = () => {
       {/* TOP */}
       <div className="flex flex-col h-49 w-full">
         <div className="relative inline-flex items-center px-3 mb-4 w-fit">
-          <span className={`${b} top-0 right-0 border-t-2 border-r-2`} />
-          <span className={`${b} bottom-0 left-0 border-b-2 border-l-2`} />
-          <span className="text-sm font-thin tracking-widest text-gray-500">BLOG</span>
+          <span className={`${b} top-0 right-0 border-t-3 border-r-3`} />
+          <span className={`${b} bottom-0 left-0 border-b-3 border-l-3`} />
+          <span className="text-sm font-light tracking-widest text-gray-700">BLOG</span>
         </div>
 
         <div className="flex gap-10 justify-between">
           {/* LEFT */}
           <div>
-            <h1 className="text-[72px] leading-[79.2px] font-thin text-black">
+            <h1 className="text-[72px] leading-[79.2px] font-light text-black">
               Photography
               <br />
               <span className="text-custom1">Stories</span>
@@ -63,7 +63,7 @@ const Blog = () => {
           </div>
           {/* RIGHT */}
           <div className="flex flex-col gap-5 items-end justify-end">
-            <p className="text-[17px] text-gray-600 leading-[23.8px] text-right max-w-85">
+            <p className="text-[17px] text-gray-700 leading-[23.8px] text-right max-w-85">
               Discover photography tips, creative techniques, and behind-the-scenes stories.
             </p>
             <Button variant="black" href="/blogs" className="">View all articles</Button>
@@ -73,7 +73,7 @@ const Blog = () => {
       </div>
 
       {/* MIDDLE */}
-      <div className="w-full py-10 flex gap-5">
+      <div className="w-full pt-20 pb-10 flex gap-5">
 
         {/* LEFT */}
         <div className="group relative flex no-custom-cursor h-156 w-177.5 flex-col overflow-hidden border-8 border-white bg-white shadow-xl cursor-pointer">
