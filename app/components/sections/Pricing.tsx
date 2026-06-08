@@ -114,7 +114,7 @@ const Pricing = () => {
       {/* RIGHT SIDE - sticky stacked cards */}
       <div className="pricing-cards  relative flex w-166 flex-col gap-24 ">
         {/* CARD ONE */}
-        <div className="pricing-card relative p-10 w-166 h-128 border-8 bg-custom1 border-white shadow-xs text-white">
+        <div className="pricing-card price-card-lines price-card-lines-light relative p-10 w-166 h-128 border-8 bg-custom1 border-white shadow-xs text-white">
           <h1 className="text-[32px] leading-[38.4px] font-medium">
             Portraits & Headshots
           </h1>
@@ -126,7 +126,7 @@ const Pricing = () => {
             <span className="text-[15px] leading-[22.5px]">/ session</span>
           </p>
 
-          <ul className="text-[15px] text-white/75 gap-1.5 flex flex-col">
+          <ul className="text-[15px] text-white/75 z-30 gap-1.5 flex flex-col">
             <li className="flex gap-1 items-center">
               <CircleCheck size={15} />
               1-hour studio shoot
@@ -156,14 +156,14 @@ const Pricing = () => {
           <Button
             variant="white"
             href="/contact"
-            className="mt-9 w-full text-center items-center justify-center flex"
+            className="mt-9 w-full text-center z-30 items-center justify-center flex"
           >
             Book Portrait Shoot
           </Button>
         </div>
 
         {/* CARD TWO */}
-        <div className="pricing-card relative p-10 w-166 h-128 border-8 bg-[#ebeff2] border-white shadow-xs text-black">
+        <div className="pricing-card price-card-lines price-card-lines-red relative p-10 w-166 h-128 border-8 bg-[#ebeff2] border-white shadow-xs text-black">
           <h1 className="text-[32px] leading-[38.4px] font-medium">
             Commercial & Branding
           </h1>
@@ -175,7 +175,7 @@ const Pricing = () => {
             <span className="text-[15px] leading-[22.5px]">/ session</span>
           </p>
 
-          <ul className="text-[15px] text-gray-700 gap-1.5 flex flex-col">
+          <ul className="text-[15px] text-gray-700 z-30 gap-1.5 flex flex-col">
             <li className="flex gap-1 items-center">
               <CircleCheck className="text-custom1" size={15} />
               2-hour shoot
@@ -205,14 +205,14 @@ const Pricing = () => {
           <Button
             variant="black"
             href="/contact"
-            className="mt-9 w-full text-center items-center justify-center flex"
+            className="mt-9 w-full text-center z-30 items-center justify-center flex"
           >
             Book Portrait Shoot
           </Button>
         </div>
 
         {/* CARD THREE */}
-        <div className="pricing-card relative p-10 w-166 h-128 border-8 bg-[#ebeff2] border-white shadow-xs text-black">
+        <div className="pricing-card price-card-lines price-card-lines-red relative p-10 w-166 h-128 border-8 bg-[#ebeff2] border-white shadow-xs text-black">
           <h1 className="text-[32px] leading-[38.4px] font-medium">
             Creative Editorials
           </h1>
@@ -224,7 +224,7 @@ const Pricing = () => {
             <span className="text-[15px] leading-[22.5px]">/ session</span>
           </p>
 
-          <ul className="text-[15px] text-gray-700 gap-1.5 flex flex-col">
+          <ul className="text-[15px] text-black/75 z-30 gap-1.5 flex flex-col">
             <li className="flex gap-1 items-center">
               <CircleCheck className="text-custom1" size={15} />
               4-hour shoot
@@ -254,7 +254,7 @@ const Pricing = () => {
           <Button
             variant="black"
             href="/contact"
-            className="mt-9 w-full text-center items-center justify-center flex"
+            className="mt-9 w-full text-center z-30 items-center justify-center flex"
           >
             Book Portrait Shoot
           </Button>

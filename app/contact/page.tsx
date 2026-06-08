@@ -7,7 +7,7 @@ const page = () => {
 
   return (
     <>
-      <section className='w-full h-fit flex flex-col items-center justify-center grid-overlay'>
+      <section className='w-full h-fit flex flex-col items-center justify-center zavian-grid'>
 
         
         {/* HEADING */}

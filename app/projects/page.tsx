@@ -11,7 +11,7 @@ const page = () => {
     <section className='w-full h-fit flex flex-col items-center justify-center '>
 
         {/* HEADING */}
-        <div className='w-full h-fit flex flex-col items-center justify-center gap-5  grid-overlay px-10 pt-35 pb-20'>
+        <div className='w-full h-fit flex flex-col items-center justify-center gap-5  zavian-grid px-10 pt-35 pb-20'>
 
             <div className="relative inline-flex items-center px-3 mb-4 w-fit">
                 <span className={`${b} top-0 right-0 border-t-3 border-r-3`} />

@@ -9,7 +9,7 @@ const Hero = () => {
     <>
       <section className="w-full h-screen bg-white p-4">
         {/* BACKGROUND GRID */}
-        <div className="grid-overlay w-full h-full px-6 py-3 flex flex-col">
+        <div className="zavian-grid w-full h-full px-6 py-3 flex flex-col">
 
           <div className="flex-1">
           {/* <Navbar /> */}

@@ -130,7 +130,7 @@ export default function ContactFormBox() {
       </div>
     </div>
 
-    <div className="w-full max-w-230 border-4 border-gray-300 bg-white px-12 py-8 mb-20 shadow-xl">
+    <div className="w-full max-w-230 border-4 border-gray-200 bg-white px-12 py-8 mb-20 shadow-xl">
       <h2 className="text-center text-[32px] font-normal leading-[38.4px] text-black/80">
         Questions or ideas?
       </h2>
@@ -146,7 +146,7 @@ export default function ContactFormBox() {
             />
           </div>
 
-          <p className="text-[20px] font-light leading-6.5 text-black/45">
+          <p className="text-[20px] font-normal leading-6.5 text-black/45">
             Drop me a line at{" "}
             <a
               href="mailto:hello@zavian.com"

@@ -40,7 +40,7 @@ const Benefits = () => {
 
   return (
     <>
-      <section className="flex flex-col items-center justify-center py-20 grid-overlay w-full h-fit px-10 ">
+      <section className="flex flex-col items-center justify-center py-20 zavian-grid w-full h-fit px-10 ">
          
          {/* TOP */}
         <div className="flex flex-col h-49 w-full">

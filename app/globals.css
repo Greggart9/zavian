@@ -17,6 +17,108 @@
     );
   }
 
+  /* Bottom vertical line effect */
+.price-card-lines {
+  position: relative;
+  overflow: hidden;
+}
+
+.price-card-lines::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 48%;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent 76px,
+    var(--line-color) 76px,
+    var(--line-color) 78px
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 30%,
+    black 100%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 30%,
+    black 100%
+  );
+}
+
+/* Use on red/orange cards */
+.price-card-lines-light {
+  --line-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Use on light cards */
+.price-card-lines-red {
+  --line-color: rgba(221, 36, 0, 0.18);
+}
+
+  .zavian-card-lines {
+  position: relative;
+  overflow: hidden;
+}
+
+.zavian-card-lines::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 70%;
+  z-index: 20;
+  pointer-events: none;
+
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.16) 0px,
+    rgba(255, 255, 255, 0.16) 1px,
+    transparent 1px,
+    transparent 52px
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 8%,
+    black 88%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 8%,
+    black 88%,
+    transparent 100%
+  );
+}
+
+    .zavian-grid {
+    background-color: #f2f7fa;
+    background-image: repeating-linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.08) 0px,
+      rgba(0, 0, 0, 0.08) 2px,
+      transparent 2px,
+      transparent 260px
+    );
+    background-size: 260px 100%;
+    background-position: center top;
+  }
+
   .black-glow {
     /* Strong black bottom glow to be clearly visible over images */
     background: linear-gradient(
@@ -44,8 +146,8 @@
   background-image: repeating-linear-gradient(
     to right,
     rgba(255, 255, 255, 0.15) 0px,
-    rgba(255, 255, 255, 0.15) 1.5px,
-    transparent 1.5px,
+    rgba(255, 255, 255, 0.15) 1px,
+    transparent 1px,
     transparent 35px
   );
   -webkit-mask-image: linear-gradient(

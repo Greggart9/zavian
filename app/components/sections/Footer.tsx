@@ -62,7 +62,7 @@ useEffect(() => {
   return (
     <footer
       ref={footerRef}
-      className="relative min-h-screen w-full overflow-hidden bg-[#f2f7fa] px-10 py-20 grid-overlay"
+      className="relative min-h-screen w-full overflow-hidden bg-[#f2f7fa] px-10 py-20 zavian-grid"
     >
       <div
         ref={innerRef}

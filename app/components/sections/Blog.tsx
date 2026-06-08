@@ -43,7 +43,7 @@ const Blog = () => {
   const side = blogs.filter((b) => !b.featured)
 
   return (
-    <section className="flex flex-col items-center justify-center py-20 grid-overlay w-full h-fit px-10">
+    <section className="flex flex-col items-center justify-center py-20 zavian-grid w-full h-fit px-10">
       {/* TOP */}
       <div className="flex flex-col h-49 w-full">
         <div className="relative inline-flex items-center px-3 mb-4 w-fit">
@@ -78,7 +78,7 @@ const Blog = () => {
         {/* LEFT */}
         <div className="group relative flex no-custom-cursor h-156 w-177.5 flex-col overflow-hidden border-8 border-white bg-white shadow-xl cursor-pointer">
           {/* IMAGE AREA */}
-          <div className="group relative h-87.5 w-full overflow-hidden lines lines-top">
+          <div className="group relative h-87.5 w-full overflow-hidden zavian-card-lines">
             <Image
               src="/assets/asset 12.png"
               alt=""
@@ -138,7 +138,7 @@ const Blog = () => {
             {/* RIGHT-TOP */}
            
             <div className="group flex w-full max-w-177.5 h-75 bg-white p-2 shadow-xl cursor-pointer">
-              <div className="group relative w-81.75 h-71 shrink-0 overflow-hidden lines lines-top">
+              <div className="group relative w-81.75 h-71 shrink-0 overflow-hidden zavian-card-lines">
               <img
                 src="/assets/asset 43.png"
                 alt="Bold portrait lighting"
@@ -178,7 +178,7 @@ const Blog = () => {
 
             {/* RIGHT-BOTTOM */}
             <div className="group flex w-full max-w-177.5 h-75  bg-white p-2 shadow-xl cursor-pointer">
-              <div className="group relative w-81.75 h-71 shrink-0 overflow-hidden lines lines-top">
+              <div className="group relative w-81.75 h-71 shrink-0 overflow-hidden zavian-card-lines">
               <img
                 src="/assets/asset 44.png"
                 alt="Retouching: Keeping It Real"
