@@ -1,6 +1,6 @@
 import React from 'react'
 import FeaturedProjectsStack from '../components/sections/FeaturedProjectsStack';
-import Slide from '../components/sections/Slide';
+import ProjectSlide from '../components/sections/ProjectSlide';
 
 const page = () => {
 
@@ -28,8 +28,8 @@ const page = () => {
             <FeaturedProjectsStack />
           </div>
 
-        <div className='w-full h-full pt-30'>
-            <Slide />
+        <div className='w-full h-full'>
+            <ProjectSlide />
           </div>
       
       
