@@ -7,7 +7,7 @@ import { Aperture, Users } from 'lucide-react';
 const Hero = () => {
   return (
     <>
-      <section className="w-full h-screen bg-white p-4">
+      <section className="w-full h-fit bg-white xl:p-4 mb-5">
         {/* BACKGROUND GRID */}
         <div className="zavian-grid w-full h-full px-6 py-3 flex flex-col">
 
@@ -15,10 +15,10 @@ const Hero = () => {
           {/* <Navbar /> */}
 
          {/* HERO CONTENT */}
-        <div className="pt-26 mb-8 flex justify-between relative ">
-          <h1 className="text-[80px] leading-23 font-light ">Capturing <span className="text-custom1">Moments</span> & <br/> Crafting Beautiful <span className="text-custom1">Stories</span></h1>
+        <div className="pt-26 mb-8 flex-col xl:flex justify-between relative ">
+          <h1 className=" text-[60px] md:text-[70px] lg:text-[80px] lg:w-200 xl:w-250 leading-18 md:leading-20 lg:leading-23 font-light ">Capturing <span className="text-custom1">Moments</span> & Crafting Beautiful <span className="text-custom1">Stories</span></h1>
            
-          <Button className="self-end" href="/contact" variant="black">
+          <Button className="mt-8 md:mt-10" href="/contact" variant="black">
             Get in touch
           </Button>
         </div>
@@ -30,9 +30,10 @@ const Hero = () => {
 
           </div>
 
-        <div className="flex justify-between font-medium border-t border-gray-300 pt-6">
-          <p>I’m Zavian, a seasoned photographer with 10 years of experience </p>
-          <p className="flex"><span className="pr-2"><Aperture size={25} strokeWidth={1.5} /></span>5000+ Photos Snapped <span className="pr-2 pl-2"> <Users strokeWidth={2} /></span> 145 Happy Clients</p>
+        <div className="flex flex-col lg:flex-row gap-4 justify-between font-medium border-t border-gray-300 pt-6 text-[12px] md:text-[15px] xl:text-[17px] leading-[23.8px]">
+          <p className="md:w-110 lg:w-160 ">I’m Zavian, a seasoned photographer with 10 years of experience in capturing life’s most unforgettable moments.</p>
+          <p className="flex flex-col lg:flex-row gap-4"> <span className="flex gap-2"><Aperture size={25} strokeWidth={1.5} />5000+ Photos Snapped </span>
+          <span className="flex gap-2"> <Users strokeWidth={2} />145 Happy Clients</span> </p>
         </div>
 
 

@@ -47,11 +47,11 @@ const Services = () => {
     <>
       <section
         ref={sectionRef}
-        className="flex h-fit flex-col bg-[#f2f7fa] px-10 py-20"
+        className="flex h-fit flex-col bg-[#f2f7fa] px-5 md:px-10 py-10 md:py-20"
       >
         {/* TOP */}
         <div>
-          <p className="w-325 text-[56px] font-light leading-17.25">
+          <p className="lx:w-325 text-[38px] md:text-[48px] lg:text-[56px] font-light leading-13 md:leading-15 lg:leading-17.25">
             I create bold <span className="text-custom1">portraits</span>,
             editorial <span className="text-custom1">headshots</span>, and{" "}
             <span className="text-custom1">cinematic event</span> coverage
@@ -63,32 +63,34 @@ const Services = () => {
         {/* MIDDLE */}
         <div
           ref={middleRef}
-          className="mt-20 flex origin-center flex-col gap-5"
+          className=" mt-10 md:mt-20 flex origin-center flex-col gap-5"
         >
           {/* SERVICE 1 */}
-          <div className="service-card flex justify-between items-center bg-[#F2F7FA] h-45 gap-10 p-7.5 border-4 border-white shadow-sm">
+          <div className="service-card flex flex-col md:flex-row justify-between items-center bg-[#F2F7FA] lg:h-45 gap-10 p-5 lg:p-7.5 border-4 border-white shadow-sm">
             {/* LEFT */}
-            <div className="flex flex-[2.2] flex-col gap-3">
+            <div className="flex md:justify-between  md:w-[60%] lg:flex-[2.2] md:h-60 lg:h-fit flex-col gap-3">
+              <div>
               <span className="flex justify-between">
-                <p className="text-[32px] leading-[38.4px]">
+                <p className="text-[20px] md:text-[32px] leading-[38.4px]">
                   Portraits & Headshots
                 </p>
                 <p >[ 1 ]</p>
               </span>
 
-              <hr className="border-gray-300" />
+              <hr className="border-gray-300 mt-2" />
+              </div>
 
-              <p className="text-[17px] leading-[23.8px] text-gray-700">
+              <p className="text-[17px] leading-[23.8px] text-gray-700  ">
                 Showcase your truest self with clarity. Bold, clean
-                <br /> portraits crafted with cinematic light.
+                 portraits crafted with cinematic light.
               </p>
             </div>
 
             {/* RIGHT */}
-            <div className="flex flex-1 gap-5">
+            <div className="flex flex-row md:ml-20 md:w-[40%] justify-between md:flex-col   lg:flex-row md:flex-1 gap-5">
               <div>
                 <Image
-                  className="h-30 w-50 border-4 border-white object-cover object-[75%_25%] shadow-2xl"
+                  className=" h-45 w-50 md:h-30 md:w-50 border-4 border-white object-cover object-[75%_25%] shadow-2xl"
                   width={200}
                   height={120}
                   src="/assets/asset 25.png"
@@ -98,7 +100,7 @@ const Services = () => {
 
               <div>
                 <Image
-                  className="h-30 w-50 border-4 border-white object-cover object-[90%_10%] shadow-2xl"
+                  className=" h-45 w-50 md:h-30 md:w-50 border-4 border-white object-cover object-[90%_10%] shadow-2xl"
                   width={200}
                   height={120}
                   src="/assets/asset 26.png"
@@ -109,29 +111,31 @@ const Services = () => {
           </div>
 
           {/* SERVICE 2 */}
-          <div className="service-card flex justify-between items-center bg-[#F2F7FA] h-45 gap-10 p-7.5 border-4 border-white shadow-sm">
+          <div className="service-card flex flex-col md:flex-row justify-between items-center bg-[#F2F7FA] lg:h-45 gap-10 p-5 lg:p-7.5 border-4 border-white shadow-sm">
             {/* LEFT */}
-            <div className="flex flex-[2.2] flex-col gap-3">
+            <div className="flex md:justify-between  md:w-[60%] lg:flex-[2.2] md:h-60 lg:h-fit flex-col gap-3">
+              <div>
               <span className="flex justify-between">
-                <p className="text-[32px] leading-[38.4px]">
+                <p className="text-[20px] md:text-[32px] leading-[38.4px]">
                   Commercial & Branding
                 </p>
-                <p>[ 2 ]</p>
+                <p >[ 2 ]</p>
               </span>
 
-              <hr className="border-gray-300" />
+              <hr className="border-gray-300 mt-2" />
+              </div>
 
-              <p className="text-[17px] leading-[23.8px] text-gray-700">
+              <p className="text-[17px] leading-[23.8px] text-gray-700  ">
                 Stand out with visuals that sell. Product, campaign,
-                <br /> and brand shoots with style.
+                 and brand shoots with style.
               </p>
             </div>
 
             {/* RIGHT */}
-            <div className="flex flex-1 gap-5">
+            <div className="flex flex-row md:ml-20 md:w-[40%] justify-between md:flex-col   lg:flex-row md:flex-1 gap-5">
               <div>
                 <Image
-                  className="h-30 w-50 border-4 border-white object-cover object-[75%_25%] shadow-2xl"
+                  className=" h-45 w-50 md:h-30 md:w-50 border-4 border-white object-cover object-[75%_25%] shadow-2xl"
                   width={200}
                   height={120}
                   src="/assets/asset 27.png"
@@ -141,7 +145,7 @@ const Services = () => {
 
               <div>
                 <Image
-                  className="h-30 w-50 border-4 border-white object-cover object-[90%_10%] shadow-2xl"
+                  className=" h-45 w-50 md:h-30 md:w-50 border-4 border-white object-cover object-[90%_10%] shadow-2xl"
                   width={200}
                   height={120}
                   src="/assets/asset 28.png"
@@ -152,29 +156,31 @@ const Services = () => {
           </div>
 
           {/* SERVICE 3 */}
-          <div className="service-card flex justify-between items-center bg-[#F2F7FA] h-45 gap-10 p-7.5 border-4 border-white shadow-sm">
+          <div className="service-card flex flex-col md:flex-row justify-between items-center bg-[#F2F7FA] lg:h-45 gap-10 p-5 lg:p-7.5 border-4 border-white shadow-sm">
             {/* LEFT */}
-            <div className="flex flex-[2.2] flex-col gap-3">
+            <div className="flex md:justify-between  md:w-[60%] lg:flex-[2.2] md:h-60 lg:h-fit flex-col gap-3">
+              <div>
               <span className="flex justify-between">
-                <p className="text-[32px] leading-[38.4px]">
+                <p className="text-[20px] md:text-[32px] leading-[38.4px]">
                   Creative Editorials
                 </p>
-                <p>[ 3 ]</p>
+                <p >[ 3 ]</p>
               </span>
 
-              <hr className="border-gray-300" />
+              <hr className="border-gray-300 mt-2" />
+              </div>
 
-              <p className="text-[17px] leading-[23.8px] text-gray-700">
+              <p className="text-[17px] leading-[23.8px] text-gray-700  ">
                 Concept-led shoots with striking mood. Where art
-                <br /> direction meets timeless imagery.
+                 direction meets timeless imagery.
               </p>
             </div>
 
             {/* RIGHT */}
-            <div className="flex flex-1 gap-5">
+            <div className="flex flex-row md:ml-20 md:w-[40%] justify-between md:flex-col   lg:flex-row md:flex-1 gap-5">
               <div>
                 <Image
-                  className="h-30 w-50 border-4 border-white object-cover object-[75%_25%] shadow-2xl"
+                  className=" h-45 w-50 md:h-30 md:w-50 border-4 border-white object-cover object-[75%_25%] shadow-2xl"
                   width={200}
                   height={120}
                   src="/assets/asset 29.png"
@@ -184,7 +190,7 @@ const Services = () => {
 
               <div>
                 <Image
-                  className="h-30 w-50 border-4 border-white object-cover object-[90%_10%] shadow-2xl"
+                  className=" h-45 w-50 md:h-30 md:w-50 border-4 border-white object-cover object-[90%_10%] shadow-2xl"
                   width={200}
                   height={120}
                   src="/assets/asset 30.png"

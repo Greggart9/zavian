@@ -10,7 +10,7 @@ const Testimonial = () => {
 
   return (
     <div>
-        <section className="flex flex-col items-center justify-center gap-10 py-20 bg-white w-full px-10 ">
+        <section className="flex flex-col items-center justify-center gap-10 py-20 bg-white w-full px-5  md:px-10 ">
             {/* TOP */}
             <div className="text-center">                                                                                                                                   
                 <div className="relative inline-flex items-center px-3">
@@ -19,9 +19,9 @@ const Testimonial = () => {
                     <span className="text-sm font-light tracking-widest text-gray-700">TESTIMONIALS</span>
                 </div>
 
-                <p className="text-[72px] font-light pt-3">What Clients Say</p>
-                <p className="text-[72px] leading-17.5 font-light text-custom1">Boldly</p>
-                <p className="text-[17px] text-gray-700 max-w-lg pt-3">
+                <p className="text-[40px] md:text-[60px] xl:text-[72px] font-light pt-3">What Clients Say</p>
+                <p className="text-[40px] md:text-[60px] xl:text-[72px] leading-12 md:leading-14 xl:leading-17.5 font-light text-custom1">Boldly</p>
+                <p className=" text-[15px] md:text-[17px] text-gray-700 max-w-sm md:max-w-lg pt-3">
                    Real words from real people. Bold portraits, effortless shoots,
                     and a style that leaves a lasting impression.
                 </p>
@@ -30,10 +30,10 @@ const Testimonial = () => {
             </div>
 
             {/* MIDDLE */}
-            <div className="flex gap-5 justify-center h-97.75  mt-10">
+            <div className="grid w-full grid-cols-1 gap-5 mt-5 sm:grid-cols-2 md:mt-10 xl:grid-cols-4">
                     
                     {/* FIRST */}
-                <div className="relative w-86.25 h-full border-4 border-white p-10 shadow-xl overflow-hidden">
+                <div className="relative h-97.75 w-full border-4 border-white p-10 shadow-xl overflow-hidden">
                   
                   
                     <Image src="/assets/asset 38.png" alt="" fill sizes="(max-width: 768px) 100vw, 345px" className="object-cover" />
@@ -72,7 +72,7 @@ const Testimonial = () => {
                 </div>
                    
                    {/* SECOND */}
-                <div className="relative w-86.25 h-full bg-[#ebeff2] border-4 border-white p-10 shadow-xl">
+                <div className="relative h-97.75 w-full bg-[#ebeff2] border-4 border-white p-10 shadow-xl">
                     <span className={`${c} top-2 right-2 border-t-3 border-r-3`} />
                     <span className={`${c} bottom-2 left-2 border-b-3 border-l-3`} />
 
@@ -102,7 +102,7 @@ const Testimonial = () => {
                 </div>
                     
                     {/* THIRD */}
-                <div className="relative w-86.25 h-full bg-black border-4 border-white shadow-xl p-10">
+                <div className="relative h-97.75 w-full bg-black border-4 border-white shadow-xl p-10">
                     <span className={`${c} top-2 right-2 border-t-3 border-r-3`} />
                     <span className={`${c} bottom-2 left-2 border-b-3 border-l-3`} />
 
@@ -131,7 +131,7 @@ const Testimonial = () => {
                 </div>
 
                     {/* FOURTH */}
-                <div className="relative flex flex-col justify-end w-86.25 h-full bg-[#ebeff2] border-4 border-white p-10 shadow-xl">
+                <div className="relative flex h-97.75 w-full flex-col justify-end bg-[#ebeff2] border-4 border-white p-10 shadow-xl">
                     <span className={`${c} top-2 right-2 border-t-3 border-r-3`} />
                     <span className={`${c} bottom-2 left-2 border-b-3 border-l-3`} />
 

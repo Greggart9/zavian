@@ -99,14 +99,14 @@ export default function FeaturedProjectCard({
         <div className="absolute inset-x-0 bottom-0 h-full black-glow pointer-events-none -z-10" />
 
         {/* Content */}
-        <div className="relative z-150 px-10 py-20 flex flex-col justify-between w-full h-full">
+        <div className="relative z-150 px-5 md:px-10 py-10 lg:py-20 flex flex-col justify-between w-full h-full">
           {/* TOP */}
-          <div className="h-29.25 w-full flex flex-col justify-between">
+          <div className=" md:h-27 lg:h-29.25 w-full flex flex-col justify-between">
             <span className="w-fit px-2 py-1 text-white text-[15px] bg-red-800 text-center shadow-[inset_0_1px_2px_rgba(255,255,255,0.5),inset_0_-4px_12px_rgba(0,0,0,0.35)]">
               {project.category}
             </span>
 
-            <h1 className="text-white/90 text-[60px] leading-17">
+            <h1 className="text-white/90 text-[30px] md:text-[45px] lg:text-[60px] leading-17">
               {project.title}
             </h1>
           </div>
@@ -114,25 +114,25 @@ export default function FeaturedProjectCard({
           {/* BOTTOM */}
           <div>
             {/* FIRST BOTTOM */}
-            <div className="flex justify-between">
+            <div className="flex flex-col-reverse xl:flex-row justify-between">
               {/* LEFT */}
               <div>
-                <p className="text-white/90 text-[25px] leading-7 w-125">
+                <p className="text-white/90 text-[16px] md:text-[20px] lg:text-[25px] md:leading-7 md:w-125">
                   {project.description}
                 </p>
 
                 <Button
                   href={project.href}
                   variant="white"
-                  className="px-6 py-3 mt-4"
+                  className=" mt-4"
                 >
                   View Project
                 </Button>
               </div>
 
               {/* RIGHT */}
-              <div className="flex flex-col justify-end items-end">
-                <span className="text-white text-[18px] tracking-widest">
+              <div className="flex flex-col justify-end xl:items-end mb-5 xl:mb-0">
+                <span className="text-white text-[20px] tracking-widest hidden xl:inline-flex">
                   {project.shotCount}
                 </span>
 
@@ -144,7 +144,7 @@ export default function FeaturedProjectCard({
                   {project.thumbnails.map((thumb) => (
                     <div
                       key={thumb.id}
-                      className="relative w-22.5 h-22.5 overflow-hidden border-3 border-white/80"
+                      className="relative w-[72px] xl:w-[90px] h-[72px] xl:h-[90px] overflow-hidden border-3 border-white/80"
                       style={{ ...getThumbStyle(thumb.id) }}
                       onMouseEnter={() => setHoveredThumb(thumb.id)}
                     >

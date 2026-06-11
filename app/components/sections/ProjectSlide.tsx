@@ -75,26 +75,26 @@ const Slide = () => {
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 -mt-90 flex flex-col justify-between px-10 pb-20">
-        <div>
+      <div className="relative z-10 -mt-90 flex flex-col items-center justify-between px-5 pb-16 text-center md:px-10 md:pb-20 lg:items-start lg:text-left">
+        <div className="flex w-full flex-col items-center lg:items-start">
           <div className="relative mb-6 inline-flex w-fit items-center px-2 py-1">
             <span className={`${b} bottom-0 left-0 border-b-3 border-l-3`} />
             <span className={`${b} right-0 top-0 border-r-3 border-t-3`} />
 
-            <span className="text-[17px] font-light leading-none text-gray-700">
+            <span className="text-[15px] font-light leading-none text-gray-700 md:text-[17px]">
               Let’s Make It Happen
             </span>
           </div>
 
-          <h2 className="text-[72px] font-light leading-[79.2px] text-black">
+          <h2 className="text-[40px] font-light leading-[50px] text-black md:text-[60px] md:leading-[70px] xl:text-[72px] xl:leading-[79.2px]">
             Ready For Your
             <br />
             <span className="text-custom1">Best Shot?</span>
           </h2>
         </div>
 
-        <div className="flex max-w-85 flex-col gap-10">
-          <p className=" text-[17px] leading-[23.8px] text-gray-700 pt-10">
+        <div className="flex w-full max-w-125 flex-col items-center gap-6 lg:max-w-85 lg:items-start lg:gap-10">
+          <p className="pt-8 text-center text-[15px] leading-[22.5px] text-gray-700 md:text-[17px] md:leading-[23.8px] lg:pt-10 lg:text-left">
             Every face tells a different story, and every frame is a proof of
             moments captured with purpose and style. Yours could be next.
           </p>

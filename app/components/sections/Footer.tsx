@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Button from "../ui/Button";
@@ -62,14 +62,14 @@ useEffect(() => {
   return (
     <footer
       ref={footerRef}
-      className="relative min-h-screen w-full overflow-hidden bg-[#f2f7fa] px-10 py-20 zavian-grid"
+      className="relative min-h-screen w-full overflow-hidden bg-[#f2f7fa] px-5 py-10 md:px-10 md:py-20 zavian-grid"
     >
       <div
         ref={innerRef}
-        className="relative grid min-h-[calc(100vh-64px)] origin-center grid-cols-[1fr_1fr] gap-20"
+        className="relative grid min-h-[calc(100vh-64px)] origin-center grid-cols-1 gap-10 xl:grid-cols-[1fr_1fr] xl:gap-20"
       >
         {/* LEFT */}
-        <div className="flex flex-col justify-between py-2 max-w-150">
+        <div className="order-2 flex max-w-none flex-col justify-between gap-12 py-2 xl:order-1 xl:max-w-150 xl:gap-0">
           <div>
             {/* LOGO */}
             <Link href="/" className="inline-block mb-4">
@@ -78,33 +78,33 @@ useEffect(() => {
                 alt="Zavian"
                 width={160}
                 height={100}
-                className="h-auto w-40"
+                className="h-auto w-32 md:w-40"
               />
             </Link>
 
-            <h2 className="text-[72px] font-light leading-[79.2px] text-black">
+            <h2 className="text-[40px] font-light leading-[50px] text-black md:text-[60px] md:leading-[70px] xl:text-[72px] xl:leading-[79.2px]">
               Your Story,
               <br />
               <span className="text-custom1">Captured Boldly.</span>
             </h2>
 
-            <Button variant="black" href="/contact" className="mt-12 w-60">
+            <Button variant="black" href="/contact" className="mt-8 w-full justify-center md:w-60 xl:mt-12">
               Let&apos;s talk
             </Button>
           </div>
 
-          <div className="max-w-114.75">
-            <div className="relative mb-9 inline-flex w-fit items-center px-2 py-1">
+          <div className="max-w-none xl:max-w-114.75">
+            <div className="relative mb-6 inline-flex w-fit items-center px-2 py-1 xl:mb-9">
               <span className={`${b} left-0 bottom-0 border-b-3 border-l-3`} />
               <span className={`${b} right-0 top-0 border-t-3 border-r-3`} />
-              <span className="text-[17px] leading-none text-gray-700 font-light tracking-widest">
+              <span className="text-[15px] leading-none text-gray-700 font-light tracking-widest md:text-[17px]">
                 NAVIGATION
               </span>
             </div>
 
             <div className="">
 
-                <ul className="flex gap-6 text-[20px] justify-between leading-6.5  text-gray-700 flex-wrap">
+                <ul className="flex flex-col gap-4 text-[17px] leading-6 text-gray-700 sm:grid sm:grid-cols-2 md:text-[20px] md:leading-6.5 xl:flex xl:flex-row xl:flex-wrap xl:justify-between xl:gap-6">
                     <li className="group flex gap-2 items-center cursor-pointer hover:text-custom1 transition-colors duration-300">Projects <ArrowUpRight className="transition-transform duration-300 ease-in-out group-hover:rotate-45" size={20} /></li>
                     <li className="group flex gap-2 items-center cursor-pointer hover:text-custom1 transition-colors duration-300">Blogs <ArrowUpRight className="transition-transform duration-300 ease-in-out group-hover:rotate-45" size={20} /></li>
                     <li className="group flex gap-2 items-center cursor-pointer hover:text-custom1 transition-colors duration-300">About <ArrowUpRight className="transition-transform duration-300 ease-in-out group-hover:rotate-45" size={20} /></li>
@@ -117,8 +117,8 @@ useEffect(() => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between">
-            <p className="text-[17px] leading-[23.8px] text-black/75">
+          <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+            <p className="text-[15px] leading-[22.5px] text-black/75 md:text-[17px] md:leading-[23.8px]">
               © 2025 Zavian. All rights reserved.
             </p>
 
@@ -130,13 +130,13 @@ useEffect(() => {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="flex items-center justify-end">
-          <div className="relative h-[86vh] w-full overflow-hidden border-8 border-white shadow-xl">
+        <div className="order-1 flex items-center justify-end xl:order-2">
+          <div className="relative h-96 w-full overflow-hidden border-8 border-white shadow-xl md:h-[620px] xl:h-[86vh]">
             <Image
               src="/assets/asset 60.png"
               alt="Footer portrait"
               fill
-              sizes="50vw"
+              sizes="(max-width: 1280px) 100vw, 50vw"
               className="object-cover"
               onLoad={() => ScrollTrigger.refresh()}
             />

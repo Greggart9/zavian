@@ -40,29 +40,30 @@ const Benefits = () => {
 
   return (
     <>
-      <section className="flex flex-col items-center justify-center py-20 zavian-grid w-full h-fit px-10 ">
+      <section className="flex flex-col items-center justify-center py-20 zavian-grid w-full h-fit px-5 lg:px-10 ">
          
          {/* TOP */}
-        <div className="flex flex-col h-49 w-full">
-
+        <div className="flex flex-col h-fit xl:h-49 w-full">
+                   <span className="flex justify-center lg:justify-start">
                     <div className="relative inline-flex items-center px-3 mb-4 w-fit">
                         <span className={`${b} top-0 right-0 border-t-3 border-r-3`} />
                         <span className={`${b} bottom-0 left-0 border-b-3 border-l-3`} />
                         <span className="text-sm font-light tracking-widest text-gray-700">BENEFITS</span>
                     </div>
+                    </span>
             
-            <div className="flex gap-10 justify-between">
+            <div className="flex flex-col lg:flex-row gap-10 justify-between">
             {/* LEFT */}
-            <div>
+            <div className="flex justify-center items-center">
 
-            <h1 className="text-[72px] leading-[79.2px] font-light text-black">Why Clients Choose <br /><span className="text-custom1">Zavian</span></h1>
+            <h1 className=" text-[40px] md:text-[60px] xl:text-[72px] text-center lg:text-left leading-[50px] md:leading-[70px] lg:leading-[79.2px] font-light text-black">Why Clients Choose <br /><span className="text-custom1">Zavian</span></h1>
 
             </div>
 
             {/* RIGHT */}
 
-            <div className="flex flex-col gap-5 items-end justify-end">
-                <p className="text-[17px] text-gray-600 leading-[23.8px] text-right max-w-85">Editorial lighting, smooth process, and portraits that feel like you. No awkward poses. Just real results, fast.</p>
+            <div className="flex flex-col -mt-5 lg:mt-0 gap-5 items-center lg:items-end justify-center lg:justify-end">
+                <p className="text-[17px] text-gray-600 leading-[23.8px] text-center lg:text-right md:max-w-125 lg:max-w-85">Editorial lighting, smooth process, and portraits that feel like you. No awkward poses. Just real results, fast.</p>
                 <Button variant="black" href="/contact" className="">Book a call</Button>
 
             </div>
@@ -73,10 +74,10 @@ const Benefits = () => {
         {/* MIDDLE */}
         <div className="w-full py-10">
 
-                <div className="grid grid-cols-3 grid-rows-2 gap-5 h-195.5">
+                <div className=" flex flex-col xl:grid xl:grid-cols-3 xl:grid-rows-2 gap-5 h-fit xl:h-195.5">
 
                     {/* [1] Wide top-left — before/after slider */}
-                    <div className="relative col-span-2 row-span-1 overflow-hidden group border-4 border-white">
+                    <div className="relative h-[370px] md:h-[411px] lg:h-[500px] xl:h-full xl:col-span-2 xl:row-span-1 overflow-hidden group border-4 border-white">
                     <BeforeAfterSlider
                         after="/assets/asset 34.png"
                         before="/assets/asset 35.png"
@@ -87,14 +88,14 @@ const Benefits = () => {
                     </div>
 
                     {/* [4] Tall right — spans 2 rows */}
-                    <div className="relative col-span-1 row-span-2 overflow-hidden group border-4 border-white">
+                    <div className="relative h-[370px] md:h-[411px] lg:h-[500px] xl:h-full xl:col-span-1 xl:row-span-2 overflow-hidden group border-4 border-white">
                     <Image src={services[3].image} alt={services[3].title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                     <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 70%)" }} />
                     <div className="absolute inset-0 flex flex-col justify-between p-6">
                         {/* Navbar sits here in the design — skip if you have a global one */}
                         <div />
                         <div className="flex flex-col gap-1">
-                        <h2 className="text-white text-[32px] font-thin leading-[38.4px]">
+                        <h2 className="text-white text-[27px] md:text-[32px] font-thin leading-[32.4px] md:leading-[38.4px]">
                             Editorial-Level<br/> Quality
                         </h2>
                         <div className="flex justify-between items-center pt-2 border-t border-white/20 text-[17px] leading-[23.8px]">
@@ -106,13 +107,13 @@ const Benefits = () => {
                     </div>
 
                     {/* [2] Bottom-left */}
-                    <div className="relative col-span-1 row-span-1 overflow-hidden group border-4 border-white">
+                    <div className="relative h-[370px] md:h-[411px] lg:h-[500px] xl:h-full xl:col-span-1 xl:row-span-1 overflow-hidden group border-4 border-white">
                     <Image src={services[1].image} alt={services[1].title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                     <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 70%)" }} />
                     <div className="absolute inset-0 flex flex-col justify-between p-6">
                         <div />
                         <div className="flex flex-col gap-1">
-                        <h2 className="text-white text-[32px] font-thin leading-[38.4px]">
+                        <h2 className="text-white text-[27px] md:text-[32px] font-thin leading-[32.4px] md:leading-[38.4px]">
                             Pro Gear<br />Always
                         </h2>
                         <div className="flex justify-between items-center pt-2 border-t border-white/20 text-[17px] leading-[23.8px]">
@@ -124,13 +125,13 @@ const Benefits = () => {
                     </div>
 
                     {/* [3] Bottom-middle */}
-                    <div className="relative col-span-1 row-span-1 overflow-hidden group border-4 border-white">
+                    <div className="relative h-[370px] md:h-[411px] xl:h-full xl:col-span-1 xl:row-span-1 overflow-hidden group border-4 border-white">
                     <Image src={services[2].image} alt={services[2].title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                     <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 70%)" }} />
                     <div className="absolute inset-0 flex flex-col justify-between p-6">
                         <div />
                         <div className="flex flex-col gap-1">
-                        <h2 className="text-white text-[32px] font-thin leading-[38.4px]">
+                        <h2 className="text-white text-[27px] md:text-[32px] font-thin leading-[32.4px] md:leading-[38.4px]">
                         Flexible Shooting<br/> Styles
                         </h2>
                         <div className="flex justify-between items-center pt-2 border-t border-white/20 text-[17px] leading-[23.8px]">

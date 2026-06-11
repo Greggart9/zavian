@@ -11,72 +11,79 @@ const Pricing = () => {
 
   const b = "absolute w-3 h-3 border-custom1";
 
- useEffect(() => {
-  gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
 
-  const ctx = gsap.context(() => {
-    const section = sectionRef.current;
-    const left = section?.querySelector<HTMLElement>(".pricing-left");
-    const cardsWrapper = section?.querySelector<HTMLElement>(".pricing-cards");
-    const cards = gsap.utils.toArray<HTMLElement>(".pricing-card");
+    const mm = gsap.matchMedia();
 
-    if (!section || !left || !cardsWrapper) return;
+    const ctx = gsap.context(() => {
+      mm.add("(min-width: 1280px)", () => {
+        const section = sectionRef.current;
+        const left = section?.querySelector<HTMLElement>(".pricing-left");
+        const cardsWrapper = section?.querySelector<HTMLElement>(".pricing-cards");
+        const cards = gsap.utils.toArray<HTMLElement>(".pricing-card");
 
-    // LEFT SIDE PIN
-    ScrollTrigger.create({
-      trigger: section,
-      start: "top top",
-      end: "bottom bottom",
-      pin: left,
-      pinSpacing: false,
-      invalidateOnRefresh: true,
-    });
+        if (!section || !left || !cardsWrapper) return;
 
-    // RIGHT STACKING CARDS
-   cards.forEach((card, index) => {
-  const isLast = index === cards.length - 1;
+        // LEFT SIDE PIN
+        ScrollTrigger.create({
+          trigger: section,
+          start: "top top",
+          end: "bottom bottom",
+          pin: left,
+          pinSpacing: false,
+          invalidateOnRefresh: true,
+        });
 
-  card.style.zIndex = String(index + 1);
+        // RIGHT STACKING CARDS
+        cards.forEach((card, index) => {
+          const isLast = index === cards.length - 1;
 
-  if (!isLast) {
-    ScrollTrigger.create({
-      trigger: card,
-      start: "top 120px",
-      endTrigger: cardsWrapper,
-      end: "bottom bottom",
-      pin: true,
-      pinSpacing: false,
-      scrub: true,
-      invalidateOnRefresh: true,
-    });
+          card.style.zIndex = String(index + 1);
 
-    gsap.to(card, {
-      scale: 0.88,
-      opacity: 1,
-      scrollTrigger: {
-        trigger: card,
-        start: "top 120px",
-        end: "bottom top",
-        scrub: 1,
-        invalidateOnRefresh: true,
-      },
-    });
-  }
-});
+          if (!isLast) {
+            ScrollTrigger.create({
+              trigger: card,
+              start: "top 120px",
+              endTrigger: cardsWrapper,
+              end: "bottom bottom",
+              pin: true,
+              pinSpacing: false,
+              scrub: true,
+              invalidateOnRefresh: true,
+            });
 
-    ScrollTrigger.refresh();
-  }, sectionRef);
+            gsap.to(card, {
+              scale: 0.88,
+              opacity: 1,
+              scrollTrigger: {
+                trigger: card,
+                start: "top 120px",
+                end: "bottom top",
+                scrub: 1,
+                invalidateOnRefresh: true,
+              },
+            });
+          }
+        });
 
-  return () => ctx.revert();
-}, []);
+        ScrollTrigger.refresh();
+      });
+    }, sectionRef);
+
+    return () => {
+      mm.revert();
+      ctx.revert();
+    };
+  }, []);
 
   return (
     <section
       ref={sectionRef}
-      className="relative flex justify-between w-full min-h-[260vh] bg-white px-10 py-20"
+      className="relative flex w-full flex-col gap-10 overflow-hidden bg-white px-5 py-16 md:px-10 md:py-20 xl:min-h-[260vh] xl:flex-row xl:justify-between xl:gap-16"
     >
       {/* LEFT SIDE*/}
-      <div className="pricing-left flex h-[calc(100vh-160px)] flex-col justify-between">
+      <div className="pricing-left flex w-full flex-col justify-between gap-10 xl:h-[calc(100vh-160px)] xl:w-[calc(100%-44rem)] xl:gap-0">
         {/* TOP */}
         <div>
           <div className="relative inline-flex items-center px-3 mb-4 w-fit">
@@ -88,12 +95,12 @@ const Pricing = () => {
           </div>
 
           <div>
-            <h1 className="text-[72px] font-light leading-[79.2px] text-black">
+            <h1 className="text-[40px] font-light leading-[50px] text-black md:text-[60px] md:leading-[70px] xl:text-[72px] xl:leading-[79.2px]">
               Effortless Booking. <br />{" "}
               <span className="text-custom1">Honest Pricing</span>
             </h1>
 
-            <p className="mt-10 max-w-100 text-[17px] leading-[23.8px] text-gray-700">
+            <p className="mt-5 max-w-125 text-[15px] leading-[22.5px] text-gray-700 md:mt-10 md:text-[17px] md:leading-[23.8px] xl:max-w-100">
               Clear packages, honest rates, and results worth every penny. No
               hidden fees, just effortless booking and bold portraits delivered
               fast.
@@ -102,7 +109,7 @@ const Pricing = () => {
         </div>
 
         {/* BOTTOM */}
-        <div className="w-full">
+        <div className="w-full hidden xl:block">
           <hr className="border-gray-300" />
           <span className="flex justify-between pt-3.5 text-[17px]">
             <p>[ 6 ]</p>
@@ -112,16 +119,16 @@ const Pricing = () => {
       </div>
 
       {/* RIGHT SIDE - sticky stacked cards */}
-      <div className="pricing-cards  relative flex w-166 flex-col gap-24 ">
+      <div className=" pricing-cards relative flex w-full flex-col gap-5 md:gap-8 xl:w-166 xl:gap-24">
         {/* CARD ONE */}
-        <div className="pricing-card price-card-lines price-card-lines-light relative p-10 w-166 h-128 border-8 bg-custom1 border-white shadow-xs text-white">
-          <h1 className="text-[32px] leading-[38.4px] font-medium">
+        <div className="pricing-card price-card-lines price-card-lines-light relative min-h-118 w-full border-8 border-white bg-custom1 p-6 text-white shadow-xs md:min-h-128 md:p-10 xl:h-128 xl:w-166">
+          <h1 className="text-[28px] leading-[34px] font-medium md:text-[32px] md:leading-[38.4px]">
             Portraits & Headshots
           </h1>
-          <p className="text-white/65 text-[20px] leading-6.5">
+          <p className="text-[17px] leading-6 text-white/65 md:text-[20px] md:leading-6.5">
             Clean, powerful portraits for professionals and creatives.
           </p>
-          <p className="text-[32px] leading-[38.4px] py-4 flex items-center gap-2">
+          <p className="flex items-center gap-2 py-4 text-[28px] leading-[34px] md:text-[32px] md:leading-[38.4px]">
             $490
             <span className="text-[15px] leading-[22.5px]">/ session</span>
           </p>
@@ -163,14 +170,14 @@ const Pricing = () => {
         </div>
 
         {/* CARD TWO */}
-        <div className="pricing-card price-card-lines price-card-lines-red relative p-10 w-166 h-128 border-8 bg-[#ebeff2] border-white shadow-xs text-black">
-          <h1 className="text-[32px] leading-[38.4px] font-medium">
+        <div className="pricing-card price-card-lines price-card-lines-red relative min-h-118 w-full border-8 border-white bg-[#ebeff2] p-6 text-black shadow-xs md:min-h-128 md:p-10 xl:h-128 xl:w-166">
+          <h1 className="text-[28px] leading-[34px] font-medium md:text-[32px] md:leading-[38.4px]">
             Commercial & Branding
           </h1>
-          <p className="text-gray-700 text-[20px] leading-6.5">
+          <p className="text-[17px] leading-6 text-gray-700 md:text-[20px] md:leading-6.5">
             Brand-focused shoots for products, teams, and campaigns.
           </p>
-          <p className="text-[32px] leading-[38.4px] py-4 flex items-center gap-2">
+          <p className="flex items-center gap-2 py-4 text-[28px] leading-[34px] md:text-[32px] md:leading-[38.4px]">
             $1250
             <span className="text-[15px] leading-[22.5px]">/ session</span>
           </p>
@@ -212,14 +219,14 @@ const Pricing = () => {
         </div>
 
         {/* CARD THREE */}
-        <div className="pricing-card price-card-lines price-card-lines-red relative p-10 w-166 h-128 border-8 bg-[#ebeff2] border-white shadow-xs text-black">
-          <h1 className="text-[32px] leading-[38.4px] font-medium">
+        <div className="pricing-card price-card-lines price-card-lines-red relative min-h-118 w-full border-8 border-white bg-[#ebeff2] p-6 text-black shadow-xs md:min-h-128 md:p-10 xl:h-128 xl:w-166">
+          <h1 className="text-[28px] leading-[34px] font-medium md:text-[32px] md:leading-[38.4px]">
             Creative Editorials
           </h1>
-          <p className="text-gray-700 text-[20px] leading-6.5">
+          <p className="text-[17px] leading-6 text-gray-700 md:text-[20px] md:leading-6.5">
             Concept-driven editorial shoots with bold styling.
           </p>
-          <p className="text-[32px] leading-[38.4px] py-4 flex items-center gap-2">
+          <p className="flex items-center gap-2 py-4 text-[28px] leading-[34px] md:text-[32px] md:leading-[38.4px]">
             $2200
             <span className="text-[15px] leading-[22.5px]">/ session</span>
           </p>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, Plus, X } from "lucide-react";
+import { Plus, X } from "lucide-react";
 import Image from "next/image";
 import Button from "../ui/Button";
 
@@ -49,10 +49,10 @@ const FAQ = () => {
   const b = "absolute h-3 w-3 border-custom1";
 
   return (
-    <section className="w-full h-fit bg-white px-10 py-20">
-      <div className="flex items-stretch justify-between">
+    <section className="h-fit w-full bg-white px-5 pb-16 md:px-10 md:py-20">
+      <div className="flex flex-col items-stretch justify-between gap-10 xl:flex-row xl:gap-16">
         {/* LEFT FAQ LIST */}
-        <div className="flex flex-col gap-2">
+        <div className="order-2 flex w-full flex-col gap-2 xl:order-1 xl:flex-1">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
 
@@ -61,11 +61,11 @@ const FAQ = () => {
                 key={faq.question}
                 type="button"
                 onClick={() => setOpenIndex(isOpen ? null : index)}
-                className="bg-[#f2f7fa] p-5 text-left transition-all duration-600 cursor-pointer"
+                className="w-full cursor-pointer bg-[#f2f7fa] p-4 text-left transition-all duration-600 md:p-5"
               >
-                <div className="flex items-start justify-between gap-6 w-179.75">
-                  <div>
-                    <h3 className="text-[20px] leading-6 text-black">
+                <div className="flex w-full items-start justify-between gap-4 md:gap-6">
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-[17px] leading-6 text-black md:text-[20px]">
                       {faq.question}
                     </h3>
 
@@ -77,7 +77,7 @@ const FAQ = () => {
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <p className="pt-7 text-[17px] leading-[22.1px] text-black/75">
+                        <p className="pt-5 text-[15px] leading-[22px] text-black/75 md:pt-7 md:text-[17px] md:leading-[22.1px]">
                           {faq.answer}
                         </p>
                       </div>
@@ -98,7 +98,7 @@ const FAQ = () => {
         </div>
 
         {/* RIGHT CONTENT */}
-        <div className="flex h-auto w-150 flex-col pt-1">
+        <div className="order-1 flex h-auto w-full flex-col gap-10 pt-1 xl:order-2 xl:w-150 xl:shrink-0 xl:gap-0">
           <div>
             <div className="relative mb-4 inline-flex w-fit items-center px-2 py-1">
               <span className={`${b} left-0 bottom-0 border-b-3 border-l-3`} />
@@ -108,13 +108,13 @@ const FAQ = () => {
               </span>
             </div>
 
-            <h2 className="text-[72px] font-light leading-[79.2px] text-black">
+            <h2 className="text-[40px] font-light leading-[50px] text-black md:text-[60px] md:leading-[70px] xl:text-[72px] xl:leading-[79.2px]">
               Your Questions
               <br />
               <span className="text-custom1">Answered here</span>
             </h2>
 
-            <p className="mt-5 max-w-100 text-[17px] leading-[23.8px] text-gray-700">
+            <p className="mt-5 max-w-125 text-[15px] leading-[22.5px] text-gray-700 md:text-[17px] md:leading-[23.8px] xl:max-w-100">
               From booking to final edits, here’s everything you need to know
               before stepping in front of my lens.
             </p>
@@ -124,21 +124,22 @@ const FAQ = () => {
             </Button>
           </div>
 
-          <div className="mt-auto flex h-20 items-center gap-6">
-            <div className="relative h-20 w-20 overflow-hidden rounded-sm border-4 border-white shadow-sm">
+          <div className="mt-auto hidden xl:flex items-center gap-4 md:h-20 md:gap-6">
+            <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-sm border-4 border-white shadow-sm md:h-20 md:w-20">
               <Image
                 src="/assets/asset 67.png"
                 alt="Zavian"
                 fill
+                sizes="(max-width: 768px) 64px, 80px"
                 className="object-cover"
               />
             </div>
 
-            <div >
-              <p className="max-w-140 text-[20px] leading-6.5 text-black">
-                "Every frame tells a story. Let's make yours unforgettable."
+            <div className="min-w-0">
+              <p className="max-w-140 text-[17px] leading-6 text-black md:text-[20px] md:leading-6.5">
+                &quot;Every frame tells a story. Let&apos;s make yours unforgettable.&quot;
               </p>
-              <p className="mt-3 text-[15px] leading-[22.5px] text-black/70">
+              <p className="mt-2 text-[15px] leading-[22.5px] text-black/70 md:mt-3">
                 Zavian, Behind The Lens
               </p>
             </div>

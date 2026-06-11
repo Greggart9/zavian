@@ -20,7 +20,7 @@ export default function Button({
   className = "",
 }: ButtonProps) {
   const base =
-    "relative inline-flex items-center overflow-hidden text-[20px] h-[58px] w-fit font-medium px-9 py-4 transition-all duration-200 group";
+    "relative inline-flex items-center overflow-hidden md:text-[20px] h-[58px] w-fit font-medium px-9 py-4 transition-all duration-200 group";
 
   const variants = {
     black: "bg-black border-2 border-white text-white hover:bg-linear-to-r from-[#333] to-black shadow-lg",
