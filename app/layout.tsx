@@ -5,6 +5,7 @@ import Navbar from "./components/ui/Navbar";
 import CustomCursor from "./components/ui/CustomCursor";
 import Footer from "./components/sections/Footer";
 import SmoothScroll from "./components/ui/SmoothScroll";
+import { Analytics } from "@vercel/analytics/next";
 
 
 const geistSans = Geist({
@@ -40,6 +41,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );
