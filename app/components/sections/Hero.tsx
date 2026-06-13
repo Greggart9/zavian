@@ -6,7 +6,7 @@ import { Aperture, Users } from 'lucide-react';
 const Hero = () => {
   return (
     <>
-      <section className="w-full h-fit bg-white xl:p-4 mb-5">
+      <section className="w-full h-fit bg-white xl:p-4 pb-5">
         {/* BACKGROUND GRID */}
         <div className="zavian-grid w-full h-full px-6 py-3 flex flex-col">
 
