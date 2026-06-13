@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useCallback } from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import { FoldHorizontal } from "lucide-react";
 
@@ -23,7 +23,24 @@ export default function BeforeAfterSlider({
 }: BeforeAfterSliderProps) {
   const [sliderPos, setSliderPos] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
+  const beforeRef = useRef<HTMLDivElement>(null);
+  const dividerRef = useRef<HTMLDivElement>(null);
+  const handleRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
+
+  useEffect(() => {
+    if (beforeRef.current) {
+      beforeRef.current.style.clipPath = `inset(0 ${100 - sliderPos}% 0 0)`;
+    }
+
+    if (dividerRef.current) {
+      dividerRef.current.style.left = `${sliderPos}%`;
+    }
+
+    if (handleRef.current) {
+      handleRef.current.style.left = `${sliderPos}%`;
+    }
+  }, [sliderPos]);
 
   const updateSlider = useCallback((clientX: number) => {
     if (!containerRef.current) return;
@@ -87,12 +104,7 @@ export default function BeforeAfterSlider({
       />
 
       {/* BEFORE — clipped, but still full width */}
-      <div
-        className="absolute inset-0"
-        style={{
-          clipPath: `inset(0 ${100 - sliderPos}% 0 0)`,
-        }}
-      >
+      <div ref={beforeRef} className="absolute inset-0">
         <Image
           src={before}
           alt={`${alt} before`}
@@ -106,14 +118,14 @@ export default function BeforeAfterSlider({
 
       {/* Divider line */}
       <div
+        ref={dividerRef}
         className="pointer-events-none absolute bottom-0 top-0 z-10 w-0.75 bg-white/45"
-        style={{ left: `${sliderPos}%` }}
       />
 
       {/* Drag handle */}
       <div
+        ref={handleRef}
         className="absolute top-1/2 z-20 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md"
-        style={{ left: `${sliderPos}%` }}
       >
         <span className="select-none text-[13px] font-bold text-[#e63b1f]">
           <FoldHorizontal strokeWidth={1.5} />
@@ -121,13 +133,7 @@ export default function BeforeAfterSlider({
       </div>
 
       {/* Bottom gradient */}
-      <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-28"
-        style={{
-          background:
-            "linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 100%)",
-        }}
-      />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-28 bg-linear-to-t from-black to-transparent" />
 
       {/* Text content */}
       <div className="pointer-events-none absolute inset-0 z-20 flex flex-col justify-between p-6">

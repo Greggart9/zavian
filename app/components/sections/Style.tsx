@@ -38,7 +38,7 @@ const Style = () => {
                 
                 <div className="absolute bottom-0 z-30 flex h-[31.5%] w-full flex-col justify-center space-y-2 bg-custom1 p-5 md:p-8">
                     <h1 className="text-[22px] leading-7.5 text-white md:text-[25px]">Lit Like Cinema</h1>
-                    <p className="text-[15px] leading-[23.8px] text-white/90 md:text-[17px]">Light isn't just technical, it's emotional. I use it to build mood, not just exposure.</p>
+                    <p className="text-[15px] leading-[23.8px] text-white/90 md:text-[17px]">Light isn&apos;t just technical, it&apos;s emotional. I use it to build mood, not just exposure.</p>
                 </div>
             </div>
 
@@ -67,7 +67,7 @@ const Style = () => {
             <hr className=" border-gray-300" />
              <span className="flex justify-between pt-3.5 text-[17px]">
                 <p>[ 2 ]</p>
-                <p>3 Pillars of Zavian's Style</p>
+                <p>3 Pillars of Zavian&apos;s Style</p>
              </span>
         </div>
 

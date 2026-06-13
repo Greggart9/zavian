@@ -6,42 +6,6 @@ import Button from '../ui/Button';
 const Blog = () => {
   const b = 'absolute w-3 h-3 border-custom1'
 
-  const blogs = [
-    {
-      id: 1,
-      category: 'Client Guides',
-      title: 'Camera Confidence Tips',
-      excerpt:
-        "Simple mindset shifts and posing guidance to feel powerful, and authentic during a photoshoot.",
-      image: '/assets/asset 12.png',
-      href: '/blogs/camera-confidence-tips',
-      featured: true,
-    },
-    {
-      id: 2,
-      category: 'Photography Tips',
-      title: 'Lighting Secrets For Bold Portraits',
-      excerpt:
-        'Discover my approach to cinematic lighting setups that bring out depth, emotion, and sharp editorial style in every portrait session.',
-      image: '/assets/asset 43.png',
-      href: '/blogs/lighting-secrets',
-      featured: false,
-    },
-    {
-      id: 3,
-      category: 'Editing Insights',
-      title: 'Retouching: Keeping It Real',
-      excerpt:
-        'My philosophy on natural retouching to maintain true skin texture while enhancing light and mood for a polished yet honest finish.',
-      image: '/assets/asset 44.png',
-      href: '/blogs/retouching-keeping-it-real',
-      featured: false,
-    },
-  ]
-
-  const featured = blogs.find((b) => b.featured)!
-  const side = blogs.filter((b) => !b.featured)
-
   return (
     <section className="flex flex-col items-center justify-center py-10 lg:py-20 zavian-grid w-full h-fit px-5 lg:px-10">
       {/* TOP */}
@@ -57,7 +21,7 @@ const Blog = () => {
         <div className="flex flex-col lg:flex-row gap-10 justify-between">
           {/* LEFT */}
           <div className="flex items-center">
-            <h1 className="text-[40px] md:text-[60px] xl:text-[72px] text-left leading-[50px] md:leading-[70px] lg:leading-[79.2px] font-light text-black">
+            <h1 className="text-[40px] md:text-[60px] xl:text-[72px] text-left leading-12.5 md:leading-17.5 lg:leading-[79.2px] font-light text-black">
               Photography
               <br />
               <span className="text-custom1">Stories</span>
@@ -98,13 +62,7 @@ const Blog = () => {
               </div>
 
             {/* IMAGE FADE ONLY */}
-            <div
-              className="pointer-events-none absolute inset-0"
-              style={{
-                background:
-                  "linear-gradient(to bottom, transparent 45%, rgba(255,255,255,0.55) 82%, rgba(255,255,255,1) 100%)",
-              }}
-            />
+            <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-transparent from-45% via-white/55 via-82% to-white" />
           </div>
 
           {/* CONTENT AREA */}
@@ -117,7 +75,7 @@ const Blog = () => {
 
             <div className="flex flex-col justify-between gap-5 pt-4 md:flex-row md:gap-8">
               <span className="w-full md:w-[67%]">
-                <h1 className="pb-3 text-[28px] leading-[34px] md:text-[32px] md:leading-[38.4px]">
+                <h1 className="pb-3 text-[28px] leading-8.5 md:text-[32px] md:leading-[38.4px]">
                   Camera Confidence Tips
                 </h1>
 
@@ -141,9 +99,11 @@ const Blog = () => {
            
             <div className="group flex w-full flex-col xl:flex-row h-auto xl:h-75 overflow-hidden border-8 border-white bg-white p-0 shadow-xl cursor-pointer xl:border-0 xl:p-2">
               <div className="group relative w-full xl:w-81.75 h-62 md:h-87.5 xl:h-auto shrink-0 overflow-hidden zavian-card-lines">
-              <img
+              <Image
                 src="/assets/asset 43.png"
                 alt="Bold portrait lighting"
+                fill
+                sizes="(max-width: 1280px) 100vw, 327px"
                 className="h-full w-full object-cover"
               />
 
@@ -163,7 +123,7 @@ const Blog = () => {
                   Photography Tips
                 </span>
 
-                <h2 className="mt-2 max-w-105 text-[28px] leading-[34px] md:text-[32px] md:leading-[38.4px] xl:text-[25px] xl:leading-7.5 font-normal text-black">
+                <h2 className="mt-2 max-w-105 text-[28px] leading-8.5 md:text-[32px] md:leading-[38.4px] xl:text-[25px] xl:leading-7.5 font-normal text-black">
                   Lighting Secrets For Bold Portraits
                 </h2>
 
@@ -181,9 +141,11 @@ const Blog = () => {
             {/* RIGHT-BOTTOM */}
             <div className="group flex w-full flex-col xl:flex-row h-auto xl:h-75 overflow-hidden border-8 border-white bg-white p-0 shadow-xl cursor-pointer xl:border-0 xl:p-2">
               <div className="group relative w-full xl:w-81.75 h-62 md:h-87.5 xl:h-auto shrink-0 overflow-hidden zavian-card-lines">
-              <img
+              <Image
                 src="/assets/asset 44.png"
                 alt="Retouching: Keeping It Real"
+                fill
+                sizes="(max-width: 1280px) 100vw, 327px"
                 className="h-full w-full object-cover"
               />
 
@@ -202,7 +164,7 @@ const Blog = () => {
                   Editing Insights
                 </span>
 
-                <h2 className="max-w-105 text-[28px] leading-[34px] md:text-[32px] md:leading-[38.4px] xl:text-[25px] xl:leading-7.5 font-normal text-black mt-2">
+                <h2 className="max-w-105 text-[28px] leading-8.5 md:text-[32px] md:leading-[38.4px] xl:text-[25px] xl:leading-7.5 font-normal text-black mt-2">
                   Retouching: Keeping It Real
                 </h2>
 
@@ -226,7 +188,7 @@ const Blog = () => {
         <hr className="border-gray-300" />
         <span className="flex justify-between pt-3.5 text-[17px]">
           <p>[ 5 ]</p>
-          <p>Notes From Zavian's Studio</p>
+          <p>Notes From Zavian&apos;s Studio</p>
         </span>
       </div>
     </section>

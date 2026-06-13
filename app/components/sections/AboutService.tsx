@@ -77,7 +77,7 @@ const Services = () => {
             <div className="flex flex-col justify-between flex-3">
                 <div >
                     <span className="flex justify-between gap-4">
-                        <p className="text-[26px] leading-[32px] md:text-[32px] md:leading-[38.4px]">Portraits & Headshots</p>
+                        <p className="text-[26px] leading-8 md:text-[32px] md:leading-[38.4px]">Portraits & Headshots</p>
                         <p>[ 1 ]</p>
                     </span> 
                     <hr className="border-gray-300 mt-3" />          
@@ -120,7 +120,7 @@ const Services = () => {
             <div className="flex flex-col justify-between flex-3">
                 <div >
                     <span className="flex justify-between gap-4">
-                        <p className="text-[26px] leading-[32px] md:text-[32px] md:leading-[38.4px]">Commercial & Branding</p>
+                        <p className="text-[26px] leading-8 md:text-[32px] md:leading-[38.4px]">Commercial & Branding</p>
                         <p>[ 2 ]</p>
                     </span> 
                     <hr className="border-gray-300 mt-3" />          
@@ -163,7 +163,7 @@ const Services = () => {
             <div className="flex flex-col justify-between flex-3">
                 <div >
                     <span className="flex justify-between gap-4">
-                        <p className="text-[26px] leading-[32px] md:text-[32px] md:leading-[38.4px]">Creative Editorials</p>
+                        <p className="text-[26px] leading-8 md:text-[32px] md:leading-[38.4px]">Creative Editorials</p>
                         <p>[ 3 ]</p>
                     </span> 
                     <hr className="border-gray-300 mt-3" />          

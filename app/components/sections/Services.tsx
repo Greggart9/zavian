@@ -207,7 +207,7 @@ const Services = () => {
 
           <span className="flex justify-between pt-3.5 text-[17px]">
             <p>[ 1 ]</p>
-            <p>Explore Zavian's Services</p>
+            <p>Explore Zavian&apos;s Services</p>
           </span>
         </div>
       </section>

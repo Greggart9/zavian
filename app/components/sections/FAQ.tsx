@@ -77,7 +77,7 @@ const FAQ = () => {
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <p className="pt-5 text-[15px] leading-[22px] text-black/75 md:pt-7 md:text-[17px] md:leading-[22.1px]">
+                        <p className="pt-5 text-[15px] leading-5.5 text-black/75 md:pt-7 md:text-[17px] md:leading-[22.1px]">
                           {faq.answer}
                         </p>
                       </div>
@@ -108,7 +108,7 @@ const FAQ = () => {
               </span>
             </div>
 
-            <h2 className="text-[40px] font-light leading-[50px] text-black md:text-[60px] md:leading-[70px] xl:text-[72px] xl:leading-[79.2px]">
+            <h2 className="text-[40px] font-light leading-12.5 text-black md:text-[60px] md:leading-17.5 xl:text-[72px] xl:leading-[79.2px]">
               Your Questions
               <br />
               <span className="text-custom1">Answered here</span>

@@ -131,7 +131,7 @@ export default function ContactFormBox() {
     </div>
 
     <div className="mb-16 w-full max-w-230 border-4 border-gray-200 bg-white px-5 py-8 shadow-xl md:mb-20 md:px-12">
-      <h2 className="text-center text-[26px] font-normal leading-[32px] text-black/80 md:text-[32px] md:leading-[38.4px]">
+      <h2 className="text-center text-[26px] font-normal leading-8 text-black/80 md:text-[32px] md:leading-[38.4px]">
         Questions or ideas?
       </h2>
 

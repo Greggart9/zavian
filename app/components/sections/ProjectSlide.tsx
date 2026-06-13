@@ -86,7 +86,7 @@ const Slide = () => {
             </span>
           </div>
 
-          <h2 className="text-[40px] font-light leading-[50px] text-black md:text-[60px] md:leading-[70px] xl:text-[72px] xl:leading-[79.2px]">
+          <h2 className="text-[40px] font-light leading-12.5 text-black md:text-[60px] md:leading-17.5 xl:text-[72px] xl:leading-[79.2px]">
             Ready For Your
             <br />
             <span className="text-custom1">Best Shot?</span>

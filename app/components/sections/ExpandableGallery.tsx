@@ -28,6 +28,7 @@ export default function ExpandableGallery() {
   const mousePos = useRef({ x: 0, y: 0 });
   const cursorPos = useRef({ x: 0, y: 0 });
   const rafRef = useRef<number>(0);
+  const cursorRef = useRef<HTMLDivElement | null>(null);
 
   // Track screen size
   useEffect(() => {
@@ -66,21 +67,24 @@ export default function ExpandableGallery() {
   const isExpanded = (id: number) => activeId === id;
   const showCustomCursor = hoveredId !== null && !isExpanded(hoveredId);
 
+  useEffect(() => {
+    if (!cursorRef.current) return;
+
+    cursorRef.current.style.left = `${renderPos.x}px`;
+    cursorRef.current.style.top = `${renderPos.y}px`;
+  }, [renderPos]);
+
   // On smaller screens, only show first 4
   const visibleImages = isXl ? images : images.slice(0, 4);
 
   return (
-    <div className="relative w-full" style={{ cursor: showCustomCursor ? "pointer" : "auto" }}>
+    <div className={`relative w-full ${showCustomCursor ? "cursor-pointer" : "cursor-auto"}`}>
 
       {/* ── Custom Cursor ─────────────────────────────── */}
       {showCustomCursor && (
         <div
-          className="fixed z-[9999] pointer-events-none"
-          style={{
-            left: renderPos.x,
-            top: renderPos.y,
-            transform: "translate(-50%, -50%)",
-          }}
+          ref={cursorRef}
+          className="pointer-events-none fixed z-[9999] -translate-x-1/2 -translate-y-1/2"
         >
           <div className="relative w-12 h-12">
             <span className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-white/60" />
@@ -96,10 +100,7 @@ export default function ExpandableGallery() {
 
       {/* ── XL — original horizontal row ─────────────── */}
       {isXl && (
-        <div
-          className="flex gap-1 items-center"
-          style={{ height: "320px", overflow: "visible" }}
-        >
+        <div className="flex h-80 items-center gap-1 overflow-visible">
           {images.map((img) => {
             const expanded = isExpanded(img.id);
             return (
@@ -108,30 +109,27 @@ export default function ExpandableGallery() {
                 onClick={() => handleClick(img.id)}
                 onMouseEnter={() => setHoveredId(img.id)}
                 onMouseLeave={() => setHoveredId(null)}
-                className="relative overflow-hidden transition-all duration-500 ease-in-out"
-                style={{
-                  flex: expanded ? "0 0 30%" : "1 1 0%",
-                  height: expanded ? "385px" : "268px",
-                  alignSelf: "center",
-                  cursor: expanded ? "default" : "pointer",
-                }}
+                className={`relative self-center overflow-hidden transition-all duration-500 ease-in-out ${
+                  expanded
+                    ? "h-[385px] flex-[0_0_30%] cursor-default"
+                    : "h-[268px] flex-1 cursor-pointer"
+                }`}
               >
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
                   sizes="40vw"
-                  className="object-cover transition-transform duration-500 ease-in-out"
-                  style={{ transform: expanded ? "scale(1)" : "scale(1.03)" }}
+                  className={`object-cover transition-transform duration-500 ease-in-out ${
+                    expanded ? "scale-100" : "scale-[1.03]"
+                  }`}
                 />
                 <div className="absolute inset-x-0 bottom-0 h-32 black-glow pointer-events-none z-10" />
                 {img.label && (
                   <div
-                    className="absolute left-4 bottom-8 z-20 transition-all duration-300"
-                    style={{
-                      opacity: expanded ? 1 : 0,
-                      transform: expanded ? "translateY(0)" : "translateY(6px)",
-                    }}
+                    className={`absolute bottom-8 left-4 z-20 transition-all duration-300 ${
+                      expanded ? "translate-y-0 opacity-100" : "translate-y-1.5 opacity-0"
+                    }`}
                   >
                     <span className="text-white text-[15px] font-medium uppercase px-2.5 py-1.5">
                       [ {img.label.toUpperCase()} ]
@@ -155,28 +153,25 @@ export default function ExpandableGallery() {
                 onClick={() => handleClick(img.id)}
                 onMouseEnter={() => setHoveredId(img.id)}
                 onMouseLeave={() => setHoveredId(null)}
-                className="relative overflow-hidden transition-all duration-500 ease-in-out"
-                style={{
-                  height: expanded ? "420px" : "180px",
-                  cursor: expanded ? "default" : "pointer",
-                }}
+                className={`relative overflow-hidden transition-all duration-500 ease-in-out ${
+                  expanded ? "h-105 cursor-default" : "h-45 cursor-pointer"
+                }`}
               >
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
                   sizes="50vw"
-                  className="object-cover transition-transform duration-500 ease-in-out"
-                  style={{ transform: expanded ? "scale(1)" : "scale(1.03)" }}
+                  className={`object-cover transition-transform duration-500 ease-in-out ${
+                    expanded ? "scale-100" : "scale-[1.03]"
+                  }`}
                 />
                 <div className="absolute inset-x-0 bottom-0 h-32 black-glow pointer-events-none z-10" />
                 {img.label && (
                   <div
-                    className="absolute left-4 bottom-8 z-20 transition-all duration-300"
-                    style={{
-                      opacity: expanded ? 1 : 0,
-                      transform: expanded ? "translateY(0)" : "translateY(6px)",
-                    }}
+                    className={`absolute bottom-8 left-4 z-20 transition-all duration-300 ${
+                      expanded ? "translate-y-0 opacity-100" : "translate-y-1.5 opacity-0"
+                    }`}
                   >
                     <span className="text-white text-[15px] font-medium uppercase px-2.5 py-1.5">
                       [ {img.label.toUpperCase()} ]

@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
-import { Brackets, Quote } from 'lucide-react';
+import { Quote } from 'lucide-react';
 
 const Testimonial = () => {
 

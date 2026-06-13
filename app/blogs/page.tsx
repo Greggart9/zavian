@@ -19,7 +19,7 @@ const page = () => {
                         <span className={`${b} bottom-0 left-0 border-b-3 border-l-3`} />
                         <span className="text-[15px] leading-[22.5px] font-light text-gray-700 md:text-[17px] md:leading-[23.8px]">BLOG</span>
              </div>
-          <h1 className='text-[42px] font-light leading-[50px] text-center md:text-[64px] md:leading-[72px] xl:text-[84px] xl:leading-[92.4px]'>Photography Tips<br/> <span className='text-custom1'>& Stories</span></h1>
+          <h1 className='text-[42px] font-light leading-12.5 text-center md:text-[64px] md:leading-18 xl:text-[84px] xl:leading-[92.4px]'>Photography Tips<br/> <span className='text-custom1'>& Stories</span></h1>
           <p className='max-w-lg text-center text-[17px] font-normal leading-6.5 text-gray-900 md:text-[25px] md:leading-7.5'>Discover photography tips, creative techniques, and behind-the-scenes stories.</p>
         </div>
 
@@ -51,13 +51,7 @@ const page = () => {
                     </div>
 
                   {/* IMAGE FADE ONLY */}
-                  <div
-                    className="pointer-events-none absolute inset-0"
-                    style={{
-                      background:
-                        "linear-gradient(to bottom, transparent 45%, rgba(255,255,255,0.55) 82%, rgba(255,255,255,1) 100%)",
-                    }}
-                  />
+                  <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-transparent from-45% via-white/55 via-82% to-white" />
                 </div>
 
                 {/* CONTENT AREA */}
@@ -70,7 +64,7 @@ const page = () => {
 
                   <div className="flex flex-col justify-between gap-5 pt-4 md:flex-row md:gap-8">
                     <span className="w-full md:w-[67%]">
-                      <h1 className="pb-3 text-[28px] leading-[34px] md:text-[32px] md:leading-[38.4px]">
+                      <h1 className="pb-3 text-[28px] leading-8.5 md:text-[32px] md:leading-[38.4px]">
                         Camera Confidence Tips
                       </h1>
 
@@ -109,13 +103,7 @@ const page = () => {
                     </div>
 
                   {/* IMAGE FADE ONLY */}
-                  <div
-                    className="pointer-events-none absolute inset-0"
-                    style={{
-                      background:
-                        "linear-gradient(to bottom, transparent 45%, rgba(255,255,255,0.55) 82%, rgba(255,255,255,1) 100%)",
-                    }}
-                  />
+                  <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-transparent from-45% via-white/55 via-82% to-white" />
                 </div>
 
                 {/* CONTENT AREA */}
@@ -128,7 +116,7 @@ const page = () => {
 
                   <div className="flex flex-col justify-between gap-5 pt-4 md:flex-row md:gap-8">
                     <span className="w-full md:w-[75%]">
-                      <h1 className="pb-3 text-[28px] leading-[34px] md:text-[32px] md:leading-[38.4px]">
+                      <h1 className="pb-3 text-[28px] leading-8.5 md:text-[32px] md:leading-[38.4px]">
                         Lighting Secrets For Bold Portraits
                       </h1>
 
@@ -170,13 +158,7 @@ const page = () => {
                     </div>
 
                   {/* IMAGE FADE ONLY */}
-                  <div
-                    className="pointer-events-none absolute inset-0"
-                    style={{
-                      background:
-                        "linear-gradient(to bottom, transparent 45%, rgba(255,255,255,0.55) 82%, rgba(255,255,255,1) 100%)",
-                    }}
-                  />
+                  <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-transparent from-45% via-white/55 via-82% to-white" />
                 </div>
 
                 {/* CONTENT AREA */}
@@ -189,7 +171,7 @@ const page = () => {
 
                   <div className="flex flex-col justify-between gap-5 pt-4 md:flex-row md:gap-8">
                     <span className="w-full md:w-[67%]">
-                      <h1 className="pb-3 text-[28px] leading-[34px] md:text-[32px] md:leading-[38.4px]">
+                      <h1 className="pb-3 text-[28px] leading-8.5 md:text-[32px] md:leading-[38.4px]">
                         Camera Confidence Tips
                       </h1>
 
@@ -228,13 +210,7 @@ const page = () => {
                     </div>
 
                   {/* IMAGE FADE ONLY */}
-                  <div
-                    className="pointer-events-none absolute inset-0"
-                    style={{
-                      background:
-                        "linear-gradient(to bottom, transparent 45%, rgba(255,255,255,0.55) 82%, rgba(255,255,255,1) 100%)",
-                    }}
-                  />
+                  <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-transparent from-45% via-white/55 via-82% to-white" />
                 </div>
 
                 {/* CONTENT AREA */}
@@ -247,7 +223,7 @@ const page = () => {
 
                   <div className="flex flex-col justify-between gap-5 pt-4 md:flex-row md:gap-8">
                     <span className="w-full md:w-[67%]">
-                      <h1 className="pb-3 text-[28px] leading-[34px] md:text-[32px] md:leading-[38.4px]">
+                      <h1 className="pb-3 text-[28px] leading-8.5 md:text-[32px] md:leading-[38.4px]">
                         Camera Confidence Tips
                       </h1>
 

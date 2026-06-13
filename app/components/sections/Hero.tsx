@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../ui/Navbar';
 import Button from '../ui/Button';
 import ExpandableGallery from './ExpandableGallery';
 import { Aperture, Users } from 'lucide-react';

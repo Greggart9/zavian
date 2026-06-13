@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
@@ -10,15 +10,7 @@ export default function SmoothScroll({
 }: {
   children: React.ReactNode;
 }) {
-  const [isHydrated, setIsHydrated] = useState(false);
-
   useEffect(() => {
-    setIsHydrated(true);
-  }, []);
-
-  useEffect(() => {
-    if (!isHydrated) return;
-
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
     const smoother = ScrollSmoother.create({
@@ -33,7 +25,7 @@ export default function SmoothScroll({
     return () => {
       smoother.kill();
     };
-  }, [isHydrated]);
+  }, []);
 
   return (
     <div id="smooth-wrapper">

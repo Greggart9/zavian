@@ -50,34 +50,31 @@ export default function FeaturedProjectCard({
   return () => ctx.revert();
 }, []);
 
-  const getThumbStyle = (id: number) => {
+  const getThumbClassName = (id: number) => {
     const isHovered = hoveredThumb === id;
     const isOther = hoveredThumb !== null && !isHovered;
 
-    const restingAngles: Record<number, number> = { 1: 0, 2: 0, 3: 0 };
-    const tiltAway: Record<number, number> = { 1: -12, 2: -4, 3: 14 };
-
     if (isHovered) {
-      return {
-        transform: "scale(1.5) rotate(0deg) translateY(-12px)",
-        zIndex: 10,
-        transition: "all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
-      };
+      return "z-10 -translate-y-3 scale-150 rotate-0";
     }
 
     if (isOther) {
-      return {
-        transform: `scale(0.92) rotate(${tiltAway[id]}deg)`,
-        zIndex: 1,
-        transition: "all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
+      const tiltAway: Record<number, string> = {
+        1: "z-1 scale-[0.92] -rotate-12",
+        2: "z-1 scale-[0.92] -rotate-4",
+        3: "z-1 scale-[0.92] rotate-[14deg]",
       };
+
+      return tiltAway[id] ?? "z-1 scale-[0.92]";
     }
 
-    return {
-      transform: `rotate(${restingAngles[id]}deg)`,
-      zIndex: id,
-      transition: "all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
+    const restingState: Record<number, string> = {
+      1: "z-1 rotate-0",
+      2: "z-2 rotate-0",
+      3: "z-3 rotate-0",
     };
+
+    return restingState[id] ?? "z-1 rotate-0";
   };
 
   return (
@@ -144,8 +141,7 @@ export default function FeaturedProjectCard({
                   {project.thumbnails.map((thumb) => (
                     <div
                       key={thumb.id}
-                      className="relative w-[72px] xl:w-[90px] h-[72px] xl:h-[90px] overflow-hidden border-3 border-white/80"
-                      style={{ ...getThumbStyle(thumb.id) }}
+                      className={`relative h-18 w-18 overflow-hidden border-3 border-white/80 transition-all duration-400 ease-[cubic-bezier(0.34,1.56,0.64,1)] xl:h-22.5 xl:w-22.5 ${getThumbClassName(thumb.id)}`}
                       onMouseEnter={() => setHoveredThumb(thumb.id)}
                     >
                       <Image

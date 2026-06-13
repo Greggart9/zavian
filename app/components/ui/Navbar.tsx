@@ -8,6 +8,13 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const navLinks = ["Home", "Projects", "Blogs", "About", "Contact"];
+const mobileLinkDelays = [
+  "delay-[180ms]",
+  "delay-[225ms]",
+  "delay-[270ms]",
+  "delay-[315ms]",
+  "delay-[360ms]",
+];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -121,9 +128,8 @@ const Navbar = () => {
                 key={link}
                 href={`/${link.toLowerCase()}`}
                 onClick={() => setIsMenuOpen(false)}
-                style={{ transitionDelay: isMenuOpen ? `${180 + index * 45}ms` : "0ms" }}
                 className={`text-[17px] font-light leading-none text-white transition-all duration-500 hover:text-custom1 ${
-                  isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0"
+                  isMenuOpen ? `translate-y-0 opacity-100 ${mobileLinkDelays[index]}` : "-translate-y-2 opacity-0 delay-0"
                 }`}
               >
                 {link}

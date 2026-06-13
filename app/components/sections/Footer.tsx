@@ -82,7 +82,7 @@ useEffect(() => {
               />
             </Link>
 
-            <h2 className="text-[40px] font-light leading-[50px] text-black md:text-[60px] md:leading-[70px] xl:text-[72px] xl:leading-[79.2px]">
+            <h2 className="text-[40px] font-light leading-12.5 text-black md:text-[60px] md:leading-17.5 xl:text-[72px] xl:leading-[79.2px]">
               Your Story,
               <br />
               <span className="text-custom1">Captured Boldly.</span>
@@ -131,7 +131,7 @@ useEffect(() => {
 
         {/* RIGHT IMAGE */}
         <div className="order-1 flex items-center justify-end xl:order-2">
-          <div className="relative h-96 w-full overflow-hidden border-8 border-white shadow-xl md:h-[620px] xl:h-[86vh]">
+          <div className="relative h-96 w-full overflow-hidden border-8 border-white shadow-xl md:h-155 xl:h-[86vh]">
             <Image
               src="/assets/asset 60.png"
               alt="Footer portrait"

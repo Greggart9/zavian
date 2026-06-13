@@ -95,7 +95,7 @@ const Pricing = () => {
           </div>
 
           <div>
-            <h1 className="text-[40px] font-light leading-[50px] text-black md:text-[60px] md:leading-[70px] xl:text-[72px] xl:leading-[79.2px]">
+            <h1 className="text-[40px] font-light leading-12.5 text-black md:text-[60px] md:leading-17.5 xl:text-[72px] xl:leading-[79.2px]">
               Effortless Booking. <br />{" "}
               <span className="text-custom1">Honest Pricing</span>
             </h1>
@@ -122,13 +122,13 @@ const Pricing = () => {
       <div className=" pricing-cards relative flex w-full flex-col gap-5 md:gap-8 xl:w-166 xl:gap-24">
         {/* CARD ONE */}
         <div className="pricing-card price-card-lines price-card-lines-light relative min-h-118 w-full border-8 border-white bg-custom1 p-6 text-white shadow-xs md:min-h-128 md:p-10 xl:h-128 xl:w-166">
-          <h1 className="text-[28px] leading-[34px] font-medium md:text-[32px] md:leading-[38.4px]">
+          <h1 className="text-[28px] leading-8.5 font-medium md:text-[32px] md:leading-[38.4px]">
             Portraits & Headshots
           </h1>
           <p className="text-[17px] leading-6 text-white/65 md:text-[20px] md:leading-6.5">
             Clean, powerful portraits for professionals and creatives.
           </p>
-          <p className="flex items-center gap-2 py-4 text-[28px] leading-[34px] md:text-[32px] md:leading-[38.4px]">
+          <p className="flex items-center gap-2 py-4 text-[28px] leading-8.5 md:text-[32px] md:leading-[38.4px]">
             $490
             <span className="text-[15px] leading-[22.5px]">/ session</span>
           </p>
@@ -171,13 +171,13 @@ const Pricing = () => {
 
         {/* CARD TWO */}
         <div className="pricing-card price-card-lines price-card-lines-red relative min-h-118 w-full border-8 border-white bg-[#ebeff2] p-6 text-black shadow-xs md:min-h-128 md:p-10 xl:h-128 xl:w-166">
-          <h1 className="text-[28px] leading-[34px] font-medium md:text-[32px] md:leading-[38.4px]">
+          <h1 className="text-[28px] leading-8.5 font-medium md:text-[32px] md:leading-[38.4px]">
             Commercial & Branding
           </h1>
           <p className="text-[17px] leading-6 text-gray-700 md:text-[20px] md:leading-6.5">
             Brand-focused shoots for products, teams, and campaigns.
           </p>
-          <p className="flex items-center gap-2 py-4 text-[28px] leading-[34px] md:text-[32px] md:leading-[38.4px]">
+          <p className="flex items-center gap-2 py-4 text-[28px] leading-8.5 md:text-[32px] md:leading-[38.4px]">
             $1250
             <span className="text-[15px] leading-[22.5px]">/ session</span>
           </p>
@@ -220,13 +220,13 @@ const Pricing = () => {
 
         {/* CARD THREE */}
         <div className="pricing-card price-card-lines price-card-lines-red relative min-h-118 w-full border-8 border-white bg-[#ebeff2] p-6 text-black shadow-xs md:min-h-128 md:p-10 xl:h-128 xl:w-166">
-          <h1 className="text-[28px] leading-[34px] font-medium md:text-[32px] md:leading-[38.4px]">
+          <h1 className="text-[28px] leading-8.5 font-medium md:text-[32px] md:leading-[38.4px]">
             Creative Editorials
           </h1>
           <p className="text-[17px] leading-6 text-gray-700 md:text-[20px] md:leading-6.5">
             Concept-driven editorial shoots with bold styling.
           </p>
-          <p className="flex items-center gap-2 py-4 text-[28px] leading-[34px] md:text-[32px] md:leading-[38.4px]">
+          <p className="flex items-center gap-2 py-4 text-[28px] leading-8.5 md:text-[32px] md:leading-[38.4px]">
             $2200
             <span className="text-[15px] leading-[22.5px]">/ session</span>
           </p>

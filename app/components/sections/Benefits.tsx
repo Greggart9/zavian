@@ -56,7 +56,7 @@ const Benefits = () => {
             {/* LEFT */}
             <div className="flex justify-center items-center">
 
-            <h1 className=" text-[40px] md:text-[60px] xl:text-[72px] text-center lg:text-left leading-[50px] md:leading-[70px] lg:leading-[79.2px] font-light text-black">Why Clients Choose <br /><span className="text-custom1">Zavian</span></h1>
+            <h1 className=" text-[40px] md:text-[60px] xl:text-[72px] text-center lg:text-left leading-12.5 md:leading-17.5 lg:leading-[79.2px] font-light text-black">Why Clients Choose <br /><span className="text-custom1">Zavian</span></h1>
 
             </div>
 
@@ -77,7 +77,7 @@ const Benefits = () => {
                 <div className=" flex flex-col xl:grid xl:grid-cols-3 xl:grid-rows-2 gap-5 h-fit xl:h-195.5">
 
                     {/* [1] Wide top-left — before/after slider */}
-                    <div className="relative h-[370px] md:h-[411px] lg:h-[500px] xl:h-full xl:col-span-2 xl:row-span-1 overflow-hidden group border-4 border-white">
+                    <div className="relative h-92.5 md:h-102.75 lg:h-125 xl:h-full xl:col-span-2 xl:row-span-1 overflow-hidden group border-4 border-white">
                     <BeforeAfterSlider
                         after="/assets/asset 34.png"
                         before="/assets/asset 35.png"
@@ -88,9 +88,9 @@ const Benefits = () => {
                     </div>
 
                     {/* [4] Tall right — spans 2 rows */}
-                    <div className="relative h-[370px] md:h-[411px] lg:h-[500px] xl:h-full xl:col-span-1 xl:row-span-2 overflow-hidden group border-4 border-white">
+                    <div className="relative h-92.5 md:h-102.75 lg:h-125 xl:h-full xl:col-span-1 xl:row-span-2 overflow-hidden group border-4 border-white">
                     <Image src={services[3].image} alt={services[3].title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
-                    <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 70%)" }} />
+                    <div className="absolute inset-0 bg-linear-to-t from-black from-0% to-transparent to-70%" />
                     <div className="absolute inset-0 flex flex-col justify-between p-6">
                         {/* Navbar sits here in the design — skip if you have a global one */}
                         <div />
@@ -107,9 +107,9 @@ const Benefits = () => {
                     </div>
 
                     {/* [2] Bottom-left */}
-                    <div className="relative h-[370px] md:h-[411px] lg:h-[500px] xl:h-full xl:col-span-1 xl:row-span-1 overflow-hidden group border-4 border-white">
+                    <div className="relative h-92.5 md:h-102.75 lg:h-125 xl:h-full xl:col-span-1 xl:row-span-1 overflow-hidden group border-4 border-white">
                     <Image src={services[1].image} alt={services[1].title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
-                    <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 70%)" }} />
+                    <div className="absolute inset-0 bg-linear-to-t from-black from-0% to-transparent to-70%" />
                     <div className="absolute inset-0 flex flex-col justify-between p-6">
                         <div />
                         <div className="flex flex-col gap-1">
@@ -125,9 +125,9 @@ const Benefits = () => {
                     </div>
 
                     {/* [3] Bottom-middle */}
-                    <div className="relative h-[370px] md:h-[411px] xl:h-full xl:col-span-1 xl:row-span-1 overflow-hidden group border-4 border-white">
+                    <div className="relative h-92.5 md:h-102.75 xl:h-full xl:col-span-1 xl:row-span-1 overflow-hidden group border-4 border-white">
                     <Image src={services[2].image} alt={services[2].title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
-                    <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 70%)" }} />
+                    <div className="absolute inset-0 bg-linear-to-t from-black from-0% to-transparent to-70%" />
                     <div className="absolute inset-0 flex flex-col justify-between p-6">
                         <div />
                         <div className="flex flex-col gap-1">

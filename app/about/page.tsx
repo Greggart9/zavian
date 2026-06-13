@@ -36,7 +36,7 @@ const page = () => {
 
             {/* FIRST BOTTOM */}
               <div>
-                <p className="text-[42px] leading-[50px] text-white md:text-[64px] md:leading-[72px] xl:text-[84px] xl:leading-[92.4px]">
+                <p className="text-[42px] leading-12.5 text-white md:text-[64px] md:leading-18 xl:text-[84px] xl:leading-[92.4px]">
                 Hey,<br />I’m Zavian Markus Holm
                 </p>
                 <p className="max-w-210 text-[17px] leading-6.5 text-white/90 md:text-[25px] md:leading-7.5">Your go-to guy for cinematic portraits that are powerful, honest, and undeniably you.</p>

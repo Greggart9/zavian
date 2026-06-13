@@ -1,11 +1,29 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement | null>(null);
+  const [isEnabled, setIsEnabled] = useState(false);
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1280px) and (hover: hover) and (pointer: fine)");
+
+    const updateEnabled = () => {
+      setIsEnabled(mediaQuery.matches);
+    };
+
+    updateEnabled();
+    mediaQuery.addEventListener("change", updateEnabled);
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateEnabled);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isEnabled) return;
+
     const cursor = cursorRef.current;
     if (!cursor) return;
 
@@ -49,13 +67,14 @@ export default function CustomCursor() {
       document.documentElement.style.cursor = "";
       document.body.style.cursor = "";
     };
-  }, []);
+  }, [isEnabled]);
+
+  if (!isEnabled) return null;
 
   return (
     <div
       ref={cursorRef}
       className="pointer-events-none fixed left-0 top-0 z-999999 flex h-7 w-7 items-center justify-center rounded-full bg-black/10  transition-opacity duration-200"
-      style={{ cursor: "auto" }}
     >
       <span className="text-[26px] font-light leading-none text-black/50">
         +
