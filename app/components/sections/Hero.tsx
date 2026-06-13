@@ -16,7 +16,7 @@ const Hero = () => {
 
          {/* HERO CONTENT */}
         <div className="pt-26 mb-8 flex-col xl:flex justify-between relative ">
-          <h1 className=" text-[60px] md:text-[70px] lg:text-[80px] lg:w-200 xl:w-250 leading-18 md:leading-20 lg:leading-23 font-light ">Capturing <span className="text-custom1">Moments</span> & Crafting Beautiful <span className="text-custom1">Stories</span></h1>
+          <h1 className=" text-[55px] md:text-[70px] lg:text-[80px] lg:w-200 xl:w-250 leading-16 md:leading-20 lg:leading-23 font-light ">Capturing <span className="text-custom1">Moments</span> & Crafting Beautiful <span className="text-custom1">Stories</span></h1>
            
           <Button className="mt-8 md:mt-10" href="/contact" variant="black">
             Get in touch
