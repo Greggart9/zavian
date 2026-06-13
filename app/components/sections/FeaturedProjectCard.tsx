@@ -78,7 +78,7 @@ export default function FeaturedProjectCard({
   };
 
   return (
-    <section ref={sectionRef} className="relative w-full h-screen overflow-hidden">
+    <section ref={sectionRef} className="relative w-full h-fit overflow-hidden">
       <div className="relative w-full h-screen overflow-hidden">
         {/* Background Image with GSAP One-Time Zoom Out */}
         <div ref={bgImageRef} className="absolute inset-0 -z-10 scale-[1.35]">
