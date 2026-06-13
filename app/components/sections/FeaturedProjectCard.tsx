@@ -109,7 +109,7 @@ export default function FeaturedProjectCard({
           </div>
 
           {/* BOTTOM */}
-          <div>
+          <div className="-mt-10 md:mt-0">
             {/* FIRST BOTTOM */}
             <div className="flex flex-col-reverse xl:flex-row justify-between">
               {/* LEFT */}
@@ -128,14 +128,14 @@ export default function FeaturedProjectCard({
               </div>
 
               {/* RIGHT */}
-              <div className="flex flex-col justify-end xl:items-end mb-5 xl:mb-0">
+              <div className="flex flex-col justify-end xl:items-end pb-5 xl:pb-0">
                 <span className="text-white text-[20px] tracking-widest hidden xl:inline-flex">
                   {project.shotCount}
                 </span>
 
                 {/* Stacked thumbnails */}
                 <div
-                  className="flex gap-3 mt-5"
+                  className="flex gap-3 xl:mt-5"
                   onMouseLeave={() => setHoveredThumb(null)}
                 >
                   {project.thumbnails.map((thumb) => (
@@ -158,7 +158,7 @@ export default function FeaturedProjectCard({
             </div>
 
             {/* SECOND BOTTOM */}
-            <div className="pt-10 text-white/90">
+            <div className=" pt-5 md:pt-10 text-white/90">
               <hr />
 
               <div className="flex justify-between pt-3">

@@ -6,7 +6,7 @@ import { Aperture, Users } from 'lucide-react';
 const Hero = () => {
   return (
     <>
-      <section className="w-full h-fit bg-white xl:p-4 pb-5">
+      <section className="w-full h-fit bg-white xl:p-4 ">
         {/* BACKGROUND GRID */}
         <div className="zavian-grid w-full h-full px-6 py-3 flex flex-col">
 
@@ -14,10 +14,10 @@ const Hero = () => {
           {/* <Navbar /> */}
 
          {/* HERO CONTENT */}
-        <div className="pt-26 mb-8 flex-col xl:flex justify-between relative ">
+        <div className="pt-26 mb-8 flex flex-col xl:flex-row justify-between relative ">
           <h1 className=" text-[55px] md:text-[70px] lg:text-[80px] lg:w-200 xl:w-250 leading-16 md:leading-20 lg:leading-23 font-light ">Capturing <span className="text-custom1">Moments</span> & Crafting Beautiful <span className="text-custom1">Stories</span></h1>
            
-          <Button className="mt-8 md:mt-10" href="/contact" variant="black">
+          <Button className="mt-8 md:mt-10 xl:self-end" href="/contact" variant="black">
             Get in touch
           </Button>
         </div>
