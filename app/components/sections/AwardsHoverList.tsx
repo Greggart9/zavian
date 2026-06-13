@@ -38,7 +38,9 @@ export default function AwardsHoverList() {
   const [activeImage, setActiveImage] = useState(awards[0].image);
 
   useEffect(() => {
-    setIsMounted(true);
+    const id = window.setTimeout(() => setIsMounted(true), 0);
+
+    return () => window.clearTimeout(id);
   }, []);
 
   useEffect(() => {
@@ -65,8 +67,8 @@ export default function AwardsHoverList() {
     });
 
     const movePreview = (e: MouseEvent) => {
-      setX(e.clientX -20);
-      setY(e.clientY -50);
+      setX(e.clientX - 20);
+      setY(e.clientY - 50);
     };
 
     const rows = document.querySelectorAll<HTMLElement>(".award-row");
@@ -106,27 +108,27 @@ export default function AwardsHoverList() {
   }, [isMounted]);
 
   return (
-    <section className="relative w-full bg-[#eef6fa] px-10 py-20 no-custom-cursor flex justify-between items-center">
+    <section className="no-custom-cursor relative flex w-full flex-col items-stretch justify-between gap-10 bg-[#eef6fa] px-5 py-16 md:px-10 md:py-20 xl:flex-row xl:items-center xl:gap-16">
 
-    <div className="w-full max-w-187.5">
+    <div className="w-full xl:max-w-187.5">
       <div className=" ">
         {awards.map((award) => (
           <div
             key={award.id}
             data-image={award.image}
-            className="award-row flex h-26 cursor-pointer items-center justify-between border-t border-black/15 text-black/75 last:border-b"
+            className="award-row flex min-h-24 cursor-pointer flex-col justify-center gap-2 border-t border-black/15 py-5 text-black/75 last:border-b md:h-26 md:flex-row md:items-center md:justify-between md:gap-6 md:py-0"
           >
-            <div className="flex items-center gap-6 ">
-              <span className="text-[20px] leading-6.5 tracking-wide">
+            <div className="flex flex-col gap-2 md:flex-row md:items-center md:gap-6">
+              <span className="text-[17px] leading-6 tracking-wide md:text-[20px] md:leading-6.5">
                 [ {award.id} ]
               </span>
 
-              <h3 className="text-[25px] font-normal leading-7.5">
+              <h3 className="text-[22px] font-normal leading-7 md:text-[25px] md:leading-7.5">
                 {award.title}
               </h3>
             </div>
 
-            <span className="text-[20px] leading-6.5">{award.year}</span>
+            <span className="text-[17px] leading-6 md:text-[20px] md:leading-6.5">{award.year}</span>
           </div>
         ))}
       </div>
@@ -150,11 +152,11 @@ export default function AwardsHoverList() {
         )}
     </div>
 
-    <div className="relative w-145 h-93.75 border-4 border-white shadow-2xl">
+    <div className="relative h-80 w-full border-4 border-white shadow-2xl md:h-110 xl:h-93.75 xl:w-145 xl:shrink-0">
         <Image 
         src="/assets/asset 51.png"
         alt=""
-        sizes="375px"
+        sizes="(max-width: 1280px) 100vw, 580px"
         className="object-cover"
          fill
          
