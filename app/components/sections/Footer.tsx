@@ -72,7 +72,7 @@ useEffect(() => {
         <div className="order-2 flex max-w-none flex-col justify-between gap-12 py-2 xl:order-1 xl:max-w-150 xl:gap-0">
           <div>
             {/* LOGO */}
-            <Link href="/" className="inline-block mb-4">
+            <Link href="/" className="hidden md:inline-block mb-4">
               <Image
                 src="/assets/asset 0.png"
                 alt="Zavian"

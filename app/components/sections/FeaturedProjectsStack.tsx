@@ -12,57 +12,81 @@ export default function FeaturedProjectsStack() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+    const section = sectionRef.current;
+    if (!section) return;
+
     const ctx = gsap.context(() => {
-      const wrapper = sectionRef.current?.querySelector<HTMLElement>(
-        ".featured-projects-wrapper"
-      );
+      const matchMedia = gsap.matchMedia();
 
-      const cards = gsap.utils.toArray<HTMLElement>(".featured-project-card");
+      // Run the stacking effect only on tablets and desktops.
+      matchMedia.add("(min-width: 768px)", () => {
+        const wrapper = section.querySelector<HTMLElement>(
+          ".featured-projects-wrapper"
+        );
 
-      if (!wrapper) return;
+        const cards = gsap.utils.toArray<HTMLElement>(
+          ".featured-project-card",
+          section
+        );
 
-      cards.forEach((card, index) => {
-        const isLast = index === cards.length - 1;
+        if (!wrapper || cards.length === 0) return;
 
-        card.style.zIndex = String(index + 1);
+        cards.forEach((card, index) => {
+          const isLastCard = index === cards.length - 1;
 
-        if (!isLast) {
+          card.style.zIndex = String(index + 1);
+
+          // Let the last card scroll normally.
+          if (isLastCard) return;
+
           ScrollTrigger.create({
             trigger: card,
-            start: "top 0px",
+            start: "top top",
             endTrigger: wrapper,
             end: "bottom bottom",
             pin: true,
             pinSpacing: false,
-            scrub: true,
             invalidateOnRefresh: true,
           });
 
           gsap.to(card, {
             scale: 1,
             opacity: 1,
+            ease: "none",
             scrollTrigger: {
               trigger: card,
-              start: "top 0px",
+              start: "top top",
               end: "bottom top",
               scrub: 1,
               invalidateOnRefresh: true,
             },
           });
-        }
+        });
+
+        ScrollTrigger.refresh();
       });
 
-      ScrollTrigger.refresh();
-    }, sectionRef);
+      return () => {
+        matchMedia.revert();
+      };
+    }, section);
 
-    return () => ctx.revert();
+    return () => {
+      ctx.revert();
+    };
   }, []);
 
   return (
-    <section ref={sectionRef} className="focus-cursor-area no-custom-cursor relative min-h-[420vh] bg-white">
-      <div className="featured-projects-wrapper relative flex flex-col gap-24 ">
+    <section
+      ref={sectionRef}
+      className="focus-cursor-area no-custom-cursor relative bg-white md:min-h-[420vh]"
+    >
+      <div className="featured-projects-wrapper relative flex flex-col gap-0 md:gap-24">
         {featuredProjects.slice(0, 4).map((project, index) => (
-          <div key={index} className="featured-project-card relative">
+          <div
+            key={project.id ?? index}
+            className="featured-project-card relative min-h-screen md:h-auto"
+          >
             <FeaturedProject project={project} />
           </div>
         ))}
