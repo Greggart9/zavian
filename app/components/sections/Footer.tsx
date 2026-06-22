@@ -104,15 +104,111 @@ useEffect(() => {
 
             <div className="">
 
-                <ul className="flex flex-col gap-4 text-[17px] leading-6 text-gray-700 sm:grid sm:grid-cols-2 md:text-[20px] md:leading-6.5 xl:flex xl:flex-row xl:flex-wrap xl:justify-between xl:gap-6">
-                    <li className="group flex gap-2 items-center cursor-pointer hover:text-custom1 transition-colors duration-300">Projects <ArrowUpRight className="transition-transform duration-300 ease-in-out group-hover:rotate-45" size={20} /></li>
-                    <li className="group flex gap-2 items-center cursor-pointer hover:text-custom1 transition-colors duration-300">Blogs <ArrowUpRight className="transition-transform duration-300 ease-in-out group-hover:rotate-45" size={20} /></li>
-                    <li className="group flex gap-2 items-center cursor-pointer hover:text-custom1 transition-colors duration-300">About <ArrowUpRight className="transition-transform duration-300 ease-in-out group-hover:rotate-45" size={20} /></li>
-                    <li className="group flex gap-2 items-center cursor-pointer hover:text-custom1 transition-colors duration-300">Contact <ArrowUpRight className="transition-transform duration-300 ease-in-out group-hover:rotate-45" size={20} /></li>
-                    <li className="group flex gap-2 items-center cursor-pointer hover:text-custom1 transition-colors duration-300">Terms <ArrowUpRight className="transition-transform duration-300 ease-in-out group-hover:rotate-45" size={20} /></li>
-                    <li className="group flex gap-2 items-center cursor-pointer hover:text-custom1 transition-colors duration-300">Privacy Policy <ArrowUpRight className="transition-transform duration-300 ease-in-out group-hover:rotate-45" size={20} /></li>
-                    <li className="group flex gap-2 items-center cursor-pointer hover:text-custom1 transition-colors duration-300">Refund Policy <ArrowUpRight className="transition-transform duration-300 ease-in-out group-hover:rotate-45" size={20} /></li>
-                </ul>
+<ul className="flex flex-col gap-4 text-[17px] leading-6 text-gray-700 sm:grid sm:grid-cols-2 md:text-[20px] md:leading-6.5 xl:flex xl:flex-row xl:flex-wrap xl:justify-between xl:gap-6">
+  <li>
+    <Link
+      href="/"
+      className="group flex items-center gap-2 transition-colors duration-300 hover:text-custom1"
+    >
+      Home
+      <ArrowUpRight
+        className="transition-transform duration-300 ease-in-out group-hover:rotate-45"
+        size={20}
+      />
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/projects"
+      className="group flex items-center gap-2 transition-colors duration-300 hover:text-custom1"
+    >
+      Projects
+      <ArrowUpRight
+        className="transition-transform duration-300 ease-in-out group-hover:rotate-45"
+        size={20}
+      />
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/blogs"
+      className="group flex items-center gap-2 transition-colors duration-300 hover:text-custom1"
+    >
+      Blogs
+      <ArrowUpRight
+        className="transition-transform duration-300 ease-in-out group-hover:rotate-45"
+        size={20}
+      />
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/about"
+      className="group flex items-center gap-2 transition-colors duration-300 hover:text-custom1"
+    >
+      About
+      <ArrowUpRight
+        className="transition-transform duration-300 ease-in-out group-hover:rotate-45"
+        size={20}
+      />
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/contact"
+      className="group flex items-center gap-2 transition-colors duration-300 hover:text-custom1"
+    >
+      Contact
+      <ArrowUpRight
+        className="transition-transform duration-300 ease-in-out group-hover:rotate-45"
+        size={20}
+      />
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/terms"
+      className="group flex items-center gap-2 transition-colors duration-300 hover:text-custom1"
+    >
+      Terms
+      <ArrowUpRight
+        className="transition-transform duration-300 ease-in-out group-hover:rotate-45"
+        size={20}
+      />
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/privacy-policy"
+      className="group flex items-center gap-2 transition-colors duration-300 hover:text-custom1"
+    >
+      Privacy Policy
+      <ArrowUpRight
+        className="transition-transform duration-300 ease-in-out group-hover:rotate-45"
+        size={20}
+      />
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/refund-policy"
+      className="group flex items-center gap-2 transition-colors duration-300 hover:text-custom1"
+    >
+      Refund Policy
+      <ArrowUpRight
+        className="transition-transform duration-300 ease-in-out group-hover:rotate-45"
+        size={20}
+      />
+    </Link>
+  </li>
+</ul>
 
             </div>
           </div>

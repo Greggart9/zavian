@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Grid2X2, Minus } from "lucide-react";
+import {Menu, Minus } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -77,17 +77,18 @@ const Navbar = () => {
       </nav>
 
       {/* Small-screen menu */}
-      <div className="relative xl:hidden">
+      <div className="relative xl:hidden ">
         {!isMenuOpen && (
           <button
             type="button"
             aria-label="Open menu"
             aria-expanded={isMenuOpen}
             onClick={() => setIsMenuOpen(true)}
-            className="flex items-center gap-5 border-2 border-white bg-black/85 px-5 py-4 text-white shadow-xl backdrop-blur-md"
+            className="flex items-center cursor-pointer gap-5 border-2 border-white bg-black/85 px-10 py-4 text-white shadow-xl backdrop-blur-md"
           >
             <span className="text-[17px] font-light leading-none">Menu</span>
-            <Grid2X2 size={22} strokeWidth={2} />
+           
+            <Menu size={22} strokeWidth={2} />
           </button>
         )}
 
