@@ -18,7 +18,6 @@ export default function FeaturedProjectsStack() {
     const ctx = gsap.context(() => {
       const matchMedia = gsap.matchMedia();
 
-      // Run the stacking effect only on tablets and desktops.
       matchMedia.add("(min-width: 768px)", () => {
         const wrapper = section.querySelector<HTMLElement>(
           ".featured-projects-wrapper"
@@ -36,7 +35,6 @@ export default function FeaturedProjectsStack() {
 
           card.style.zIndex = String(index + 1);
 
-          // Let the last card scroll normally.
           if (isLastCard) return;
 
           ScrollTrigger.create({
@@ -63,7 +61,12 @@ export default function FeaturedProjectsStack() {
           });
         });
 
-        ScrollTrigger.refresh();
+        // Don't refresh immediately — wait until template's fade-in has settled
+        const timeout = setTimeout(() => {
+          ScrollTrigger.refresh();
+        }, 600);
+
+        return () => clearTimeout(timeout);
       });
 
       return () => {
@@ -79,9 +82,9 @@ export default function FeaturedProjectsStack() {
   return (
     <section
       ref={sectionRef}
-      className="focus-cursor-area no-custom-cursor relative bg-white md:min-h-[420vh]"
+      className="focus-cursor-area no-custom-cursor relative bg-white "
     >
-      <div className="featured-projects-wrapper relative flex flex-col gap-0 md:gap-24">
+      <div className="featured-projects-wrapper relative flex flex-col gap-0">
         {featuredProjects.slice(0, 4).map((project, index) => (
           <div
             key={project.id ?? index}

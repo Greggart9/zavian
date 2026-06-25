@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '../ui/Button';
 import Image from 'next/image';
 import BeforeAfterSlider from '../ui/BeforeAfterSlider';
+import RevealOnScroll from "../ui/RevealOnScroll";
 
 const Benefits = () => {
     const b = "absolute w-3 h-3 border-custom1";
@@ -42,6 +43,7 @@ const Benefits = () => {
     <>
       <section className="flex flex-col items-center justify-center py-20 zavian-grid w-full h-fit px-5 lg:px-10 ">
          
+         <RevealOnScroll className="w-full">
          {/* TOP */}
         <div className="flex flex-col h-fit xl:h-49 w-full">
                    <span className="flex justify-center lg:justify-start">
@@ -70,7 +72,10 @@ const Benefits = () => {
             </div>
 
         </div>
+        </RevealOnScroll>
 
+
+        <RevealOnScroll className="w-full" delay={0.5}>
         {/* MIDDLE */}
         <div className="w-full py-10">
 
@@ -153,6 +158,7 @@ const Benefits = () => {
                 <p>Designed For Your Vision</p>
              </span>
         </div>
+        </RevealOnScroll>
 
       </section>
     </>

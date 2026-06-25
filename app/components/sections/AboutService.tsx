@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import TextReveal from "../ui/TextReveal";
 
 const Services = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -51,11 +52,14 @@ const Services = () => {
       >
         {/* TOP */}
         <div className="w-full bg-[#eef6fa] ">
-            <p className="max-w-375 text-[30px] font-light leading-tight text-black md:text-[42px] xl:text-[50px]">
-                For me, photography isn’t just about beautiful images -
-                it’s about capturing what words miss: your quiet
-                strength, freedom, and timeless presence.
-            </p>
+            <TextReveal
+              as="p"
+              className="max-w-375 text-[30px] font-light leading-tight text-black md:text-[42px] xl:text-[50px]"
+            >
+              For me, photography isn't just about beautiful images -
+              it's about capturing what words miss: your quiet
+              strength, freedom, and timeless presence.
+            </TextReveal>
 
             <div className="mt-12 border-t border-black/35 pt-5 md:mt-24">
                 <div className="flex flex-col gap-2 text-[15px] leading-[22.5px] text-black/75 md:text-[18px] md:leading-none lg:flex-row lg:items-center lg:justify-between">

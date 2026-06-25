@@ -247,9 +247,6 @@ const page = () => {
 
         </div>
 
-
-
-
         <div className='w-full h-full pt-10 md:pt-20 xl:pt-30'>
             <Slide />
         </div>

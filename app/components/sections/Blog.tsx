@@ -2,12 +2,15 @@ import React from 'react'
 import Image from 'next/image'
 import { ArrowUpRight, Plus } from 'lucide-react';
 import Button from '../ui/Button';
+import RevealOnScroll from "../ui/RevealOnScroll";
 
 const Blog = () => {
   const b = 'absolute w-3 h-3 border-custom1'
 
   return (
     <section className="flex flex-col items-center justify-center py-10 lg:py-20 zavian-grid w-full h-fit px-5 lg:px-10">
+
+      <RevealOnScroll className="w-full">
       {/* TOP */}
       <div className="flex flex-col h-fit xl:h-49 w-full">
         <span className="flex justify-start">
@@ -37,7 +40,10 @@ const Blog = () => {
           </div>
         </div>
       </div>
+      </RevealOnScroll>
 
+
+      <RevealOnScroll delay={0.5}>
       {/* MIDDLE */}
       <div className="w-full pt-10 md:pt-20 pb-10 flex flex-col xl:flex-row gap-5">
 
@@ -191,6 +197,8 @@ const Blog = () => {
           <p>Notes From Zavian&apos;s Studio</p>
         </span>
       </div>
+      </RevealOnScroll>
+
     </section>
   )
 }

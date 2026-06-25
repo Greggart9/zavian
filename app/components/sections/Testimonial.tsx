@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import { Quote } from 'lucide-react';
+import RevealOnScroll from "../ui/RevealOnScroll";
 
 const Testimonial = () => {
 
@@ -11,6 +12,8 @@ const Testimonial = () => {
   return (
     <div>
         <section className="flex flex-col items-center justify-center gap-10 py-20 bg-white w-full px-5  md:px-10 ">
+
+            <RevealOnScroll >
             {/* TOP */}
             <div className="text-center">                                                                                                                                   
                 <div className="relative inline-flex items-center px-3">
@@ -28,7 +31,10 @@ const Testimonial = () => {
 
             
             </div>
+            </RevealOnScroll>
 
+
+            <RevealOnScroll delay={0.5}>
             {/* MIDDLE */}
             <div className="grid w-full grid-cols-1 gap-5 mt-5 sm:grid-cols-2 md:mt-10 xl:grid-cols-4">
                     
@@ -170,6 +176,7 @@ const Testimonial = () => {
                     <p>Clients Speak. Results Show</p>
                 </span>
             </div>
+            </RevealOnScroll>
 
         </section>
     </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TextReveal from "../ui/TextReveal";
 
 const people = [
   {
@@ -32,27 +33,22 @@ export default function AboutStorySection() {
       <div className="relative z-10">
         {/* TEXT */}
         <div className="max-w-312.5">
-          <p className="text-[30px] font-light leading-tight text-black md:text-[42px] xl:text-[48px]">
-            Based in{" "}
-            <span className="text-custom1">Copenhagen, Denmark</span>, I’m a
-            portrait and
-            
-            editorial photographer capturing raw, cinematic stories
-            
-            through light, mood, and honest expression.
-          </p>
+          <TextReveal as="p" className="text-[30px] font-light leading-tight text-black md:text-[42px] xl:text-[48px]">
+          Based in <span className="text-custom1">Copenhagen, Denmark</span>, I'm a
+          portrait and editorial photographer capturing raw, cinematic stories
+          through light, mood, and honest expression.
+        </TextReveal>
 
-          <p className="mt-8 text-[32px] font-light leading-tight text-black md:mt-14 md:text-[44px] xl:text-[52px]">
-            Over the past decade, I’ve photographed{" "}
-            <span className="text-custom1">models,</span>
-            
-            <span className="text-custom1">
-              musicians, and creative entrepreneurs
-            </span>{" "}
-            for brands and
-            
-            editorials including:
-          </p>
+        <TextReveal
+          as="p"
+          delay={0.15}
+          className="mt-8 text-[32px] font-light leading-tight text-black md:mt-14 md:text-[44px] xl:text-[52px]"
+        >
+          Over the past decade, I've photographed{" "}
+          <span className="text-custom1">models,</span>{" "}
+          <span className="text-custom1">musicians, and creative entrepreneurs</span>{" "}
+          for brands and editorials including:
+        </TextReveal>
         </div>
 
         {/* CARDS */}

@@ -1,4 +1,3 @@
-// components/sections/FeaturedProjectCard.tsx
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -29,7 +28,6 @@ export default function FeaturedProjectCard({
     const ctx = gsap.context(() => {
       const mm = gsap.matchMedia();
 
-      // Mobile: show the image normally without ScrollTrigger animation.
       mm.add("(max-width: 767px)", () => {
         gsap.set(bgImage, {
           scale: 1,
@@ -37,7 +35,6 @@ export default function FeaturedProjectCard({
         });
       });
 
-      // Tablet and desktop: run the one-time zoom-out effect.
       mm.add("(min-width: 768px)", () => {
         gsap.set(bgImage, {
           scale: 1.65,
@@ -49,7 +46,6 @@ export default function FeaturedProjectCard({
           start: "top 35%",
           once: true,
           invalidateOnRefresh: true,
-
           onEnter: () => {
             gsap.to(bgImage, {
               scale: 1,
@@ -64,11 +60,13 @@ export default function FeaturedProjectCard({
         };
       });
 
-      requestAnimationFrame(() => {
+      // Wait for the template's fade-in to settle before locking in measurements
+      const timeout = setTimeout(() => {
         ScrollTrigger.refresh();
-      });
+      }, 600);
 
       return () => {
+        clearTimeout(timeout);
         mm.revert();
       };
     }, section);
@@ -112,10 +110,7 @@ export default function FeaturedProjectCard({
     >
       <div className="relative min-h-screen w-full overflow-hidden">
         {/* MAIN BACKGROUND IMAGE */}
-        <div
-          ref={bgImageRef}
-          className="absolute inset-0 z-0"
-        >
+        <div ref={bgImageRef} className="absolute inset-0 z-0">
           <Image
             src={project.heroImage}
             alt={project.title}
@@ -132,7 +127,6 @@ export default function FeaturedProjectCard({
 
         {/* CONTENT */}
         <div className="relative z-50 flex min-h-screen w-full flex-col justify-between px-5 py-10 md:px-10 lg:py-20">
-          {/* TOP */}
           <div className="flex w-full flex-col justify-between md:h-27 lg:h-29.25">
             <span className="w-fit bg-red-800 px-2 py-1 text-center text-[15px] text-white shadow-[inset_0_1px_2px_rgba(255,255,255,0.5),inset_0_-4px_12px_rgba(0,0,0,0.35)]">
               {project.category}
@@ -143,25 +137,18 @@ export default function FeaturedProjectCard({
             </h1>
           </div>
 
-          {/* BOTTOM */}
           <div className="mt-auto pt-10 md:pt-0">
             <div className="flex flex-col-reverse justify-between gap-7 xl:flex-row">
-              {/* LEFT */}
               <div>
                 <p className="text-[16px] leading-6 text-white/90 md:w-125 md:text-[20px] md:leading-7 lg:text-[25px]">
                   {project.description}
                 </p>
 
-                <Button
-                  href={project.href}
-                  variant="white"
-                  className="mt-4"
-                >
+                <Button href={project.href} variant="white" className="mt-4">
                   View Project
                 </Button>
               </div>
 
-              {/* RIGHT */}
               <div className="flex flex-col justify-end pb-5 xl:items-end xl:pb-0">
                 <span className="hidden text-[20px] tracking-widest text-white xl:inline-flex">
                   {project.shotCount}
@@ -192,7 +179,6 @@ export default function FeaturedProjectCard({
               </div>
             </div>
 
-            {/* FOOTER DETAILS */}
             <div className="pt-5 text-white/90 md:pt-10">
               <hr className="border-white/50" />
 

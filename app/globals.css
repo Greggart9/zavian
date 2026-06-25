@@ -124,8 +124,8 @@
     background: linear-gradient(
       180deg,
       rgba(0,0,0,0) 40%,
-      rgba(0,0,0,0.6) 75%,
-      rgba(0,0,0,0.92) 100%
+      rgba(0,0,0,0.5) 75%,
+      rgba(0,0,0,0.72) 100%
     );
     opacity: 1;
     mix-blend-mode: normal;

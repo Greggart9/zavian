@@ -76,7 +76,7 @@ export default function CustomCursor() {
       ref={cursorRef}
       className="pointer-events-none fixed left-0 top-0 z-999999 flex h-7 w-7 items-center justify-center rounded-full bg-black/10  transition-opacity duration-200"
     >
-      <span className="text-[26px] font-light leading-none text-black/50">
+      <span className="text-[15px] font-light leading-none text-white">
         +
       </span>
     </div>

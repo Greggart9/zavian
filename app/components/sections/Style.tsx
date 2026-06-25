@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../ui/Button';
 import Image from 'next/image';
+import RevealOnScroll from "../ui/RevealOnScroll";
 
 const Style = () => {
     const b = "absolute w-3 h-3 border-custom1";
@@ -11,6 +12,7 @@ const Style = () => {
     <>
     <section className="flex flex-col items-center justify-center gap-10 py-15 md:py-20 bg-white w-full px-5 lg:px-10 ">
         {/* TOP */}
+        <RevealOnScroll>
         <div className="text-center">
             <div className="relative inline-flex items-center px-3">
                 <span className={`${b} top-0 right-0 border-t-3 border-r-3`} />
@@ -29,7 +31,10 @@ const Style = () => {
             <Button variant="black" href="/about" className="mt-4">Learn more about me</Button>
          
         </div>
+        </RevealOnScroll>
 
+
+        <RevealOnScroll delay={0.5}>
         {/* MIDDLE */}
         <div className="mt-4 flex w-full max-w-8xl flex-col gap-3 md:gap-5 md:flex-row md:flex-wrap md:justify-center xl:flex-nowrap">
 
@@ -70,6 +75,7 @@ const Style = () => {
                 <p>3 Pillars of Zavian&apos;s Style</p>
              </span>
         </div>
+        </RevealOnScroll>
 
     </section>
     </>

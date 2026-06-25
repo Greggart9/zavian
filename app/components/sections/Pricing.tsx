@@ -83,6 +83,7 @@ const Pricing = () => {
       className="relative flex w-full flex-col gap-10 overflow-hidden bg-white px-5 py-16 md:px-10 md:py-20 xl:min-h-[260vh] xl:flex-row xl:justify-between xl:gap-16"
     >
       {/* LEFT SIDE*/}
+      
       <div className="pricing-left flex w-full flex-col justify-between gap-10 xl:h-[calc(100vh-160px)] xl:w-[calc(100%-44rem)] xl:gap-0">
         {/* TOP */}
         <div>
