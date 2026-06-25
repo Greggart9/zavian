@@ -1,7 +1,7 @@
 // components/ui/TextReveal.tsx
 "use client";
 
-import { useEffect, useRef } from "react";
+import { createElement, useEffect, useRef, type JSX } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
@@ -16,12 +16,12 @@ type TextRevealProps = {
 
 export default function TextReveal({
   children,
-  as: Tag = "p",
+  as = "p",
   className = "",
   delay = 0,
   stagger = 0.08,
 }: TextRevealProps) {
-  const ref = useRef<HTMLDivElement | null>(null);
+  const ref = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -30,23 +30,21 @@ export default function TextReveal({
     if (!el) return;
 
     let splitInstance: SplitText;
-    let animation: gsap.core.Tween;
 
     document.fonts.ready.then(() => {
       const ctx = gsap.context(() => {
-        // Make element visible before splitting (avoids FOUC of unsplit text)
         gsap.set(el, { opacity: 1 });
 
         splitInstance = SplitText.create(el, {
           type: "lines",
           linesClass: "line",
           autoSplit: true,
-          mask: "lines", // auto-wraps each line in an overflow-hidden mask
+          mask: "lines",
           onSplit: (self) => {
-            animation = gsap.from(self.lines, {
+            return gsap.from(self.lines, {
               yPercent: 100,
               opacity: 0,
-              duration: 1.5,
+              duration: 0.7,
               delay,
               stagger,
               ease: "expo.out",
@@ -56,7 +54,6 @@ export default function TextReveal({
                 toggleActions: "play none none none",
               },
             });
-            return animation;
           },
         });
       }, ref);
@@ -69,9 +66,9 @@ export default function TextReveal({
     };
   }, [delay, stagger]);
 
-  return (
-    <Tag ref={ref as any} className={`opacity-0 ${className}`}>
-      {children}
-    </Tag>
+  return createElement(
+    as,
+    { ref, className: `opacity-0 ${className}` },
+    children
   );
 }

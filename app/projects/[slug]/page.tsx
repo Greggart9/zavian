@@ -59,7 +59,7 @@ export default async function ProjectSlugPage({
           <h1 className="text-white text-[80px] font-light leading-none">
             {project.title}
           </h1>
-          <p className="text-white/90 text-[22px] leading-relaxed max-w-[620px]">
+          <p className="text-white/90 text-[22px] leading-relaxed max-w-155">
             {project.description}
           </p>
 
@@ -80,8 +80,8 @@ export default async function ProjectSlugPage({
             return (
               <div
                 key={img.id}
-                className={`relative h-[400px] overflow-hidden ${
-                  isLast ? "md:col-span-2 md:h-[500px]" : ""
+                className={`relative h-100 overflow-hidden ${
+                  isLast ? "md:col-span-2 md:h-125" : ""
                 }`}
               >
                 <Image
