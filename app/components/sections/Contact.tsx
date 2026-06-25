@@ -40,6 +40,8 @@ export default function ContactFormBox() {
             </label>
 
             <input
+            title="Full Name"
+              placeholder="John Doe"
               type="text"
               value={form.fullName}
               onChange={(e) =>
@@ -56,6 +58,8 @@ export default function ContactFormBox() {
             </label>
 
             <input
+              title="Email"
+              placeholder="your.email@example.com"
               type="email"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -71,6 +75,7 @@ export default function ContactFormBox() {
           </label>
 
           <select
+          title="select"
             value={form.projectType}
             onChange={(e) =>
               setForm({ ...form, projectType: e.target.value })
@@ -94,6 +99,7 @@ export default function ContactFormBox() {
           </label>
 
           <textarea
+          title="message"
             value={form.message}
             onChange={(e) => setForm({ ...form, message: e.target.value })}
             className="h-36 w-full resize-none rounded-sm border border-black/5 bg-white p-4 text-[15px] leading-[22.5px] text-black outline-none transition focus:border-gray-400 md:h-40 md:text-[17px] md:leading-[23.8px]"

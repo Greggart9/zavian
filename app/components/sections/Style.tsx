@@ -34,7 +34,7 @@ const Style = () => {
         </RevealOnScroll>
 
 
-        <RevealOnScroll delay={0.5}>
+        <RevealOnScroll className="w-full" delay={0.1}>
         {/* MIDDLE */}
         <div className="mt-4 flex w-full max-w-8xl flex-col gap-3 md:gap-5 md:flex-row md:flex-wrap md:justify-center xl:flex-nowrap">
 

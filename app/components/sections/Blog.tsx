@@ -43,7 +43,7 @@ const Blog = () => {
       </RevealOnScroll>
 
 
-      <RevealOnScroll delay={0.5}>
+      <RevealOnScroll delay={0.1}>
       {/* MIDDLE */}
       <div className="w-full pt-10 md:pt-20 pb-10 flex flex-col xl:flex-row gap-5">
 

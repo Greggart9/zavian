@@ -75,7 +75,7 @@ const Benefits = () => {
         </RevealOnScroll>
 
 
-        <RevealOnScroll className="w-full" delay={0.5}>
+        <RevealOnScroll className="w-full" delay={0.1}>
         {/* MIDDLE */}
         <div className="w-full py-10">
 

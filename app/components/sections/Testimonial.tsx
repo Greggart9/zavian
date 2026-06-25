@@ -34,7 +34,7 @@ const Testimonial = () => {
             </RevealOnScroll>
 
 
-            <RevealOnScroll delay={0.5}>
+            <RevealOnScroll delay={0.1}>
             {/* MIDDLE */}
             <div className="grid w-full grid-cols-1 gap-5 mt-5 sm:grid-cols-2 md:mt-10 xl:grid-cols-4">
                     

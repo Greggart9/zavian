@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
+
 type GalleryImage = {
   id: number;
   src: string;
