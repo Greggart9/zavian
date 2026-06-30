@@ -13,7 +13,7 @@ type GalleryImage = {
 
 const images: GalleryImage[] = [
   { id: 1, src: "/assets/asset 5.png", alt: "Portrait 1", label: "EDITORIAL PORTRAIT" },
-  { id: 2, src: "/assets/asset 6.png", alt: "Portrait 2", label: "URBAN EDITORIAL" },
+  { id: 2, src: "/assets/asset 80.png", alt: "Portrait 2", label: "URBAN EDITORIAL" },
   { id: 3, src: "/assets/asset 7.png", alt: "Portrait 3", label: "STUDIO PORTRAIT" },
   { id: 4, src: "/assets/asset 8.png", alt: "Portrait 4", label: "INTIMATE PORTRAIT" },
   { id: 5, src: "/assets/asset 9.png", alt: "Portrait 5", label: "CINEMATIC PORTRAIT" },
